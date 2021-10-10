@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>門市資訊</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="header css.css">
+    <style>
+        body{
+            background-image:url(album/rose.png);
+            background-repeat: no-repeat;
+            background-position: top right;
+            background-size: 500px;
+        }
+        .branch{
+            padding-top:200px;
+            width:1200px;
+            margin: auto;
+        }
+        .branch h2{
+            font-size: 60px;
+            text-shadow: 10px 1px 10px grey;
+            text-align: center;
+        }
+        .store-title{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .store{
+            margin-top: 150px;
+            text-align: center;
+        }
+        .store h3{
+            font-size: 30px;
+            text-shadow: 10px 1px 10px grey;
+        }
+        .pic-and-info{
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            border-top: 1px solid black;
+            padding-top: 40px;
+        }
+        .pic{
+            width: 50%;
+        }
+        .pic img{
+            width: 100%;
+            vertical-align: top;
+        }
+        .info{
+            width: 50%;
+        }
+        .txt{
+            display: flex;
+            align-items: center;
+            text-align: start;
+            line-height: 5em;
+        }
+        .icon{
+            width: 10%;
+            margin-left: 50px;
+        }
+        .icon img{
+            width: 100%;
+            vertical-align: top;
+            margin-top: 10px;
+        }
+        .contact-info{
+            width: 70%;
+            font-size: 25px;
+            margin-left: 20px;
+        }
+        .appointment{
+            text-align: center;
+            margin-top: 100px;
+            font-size: 30px;
+        }
+        .appointment a{
+            color: #888;
+        } 
+        .appointment a:hover{
+            color: #ff3399;
+        }
+        .help{
+            text-align: center;
+            margin-top: 50px;
+        }
+        section{
+            padding-bottom: 100px;
+            background-image: url(album/rose2.png);
+            background-repeat: no-repeat;
+            background-position: bottom left;
+            background-position-y: 280vh;
+            background-size:500px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 主選單 -->
+    <header>
+        <div class="main-nav-bar">
+                <h1><a href="home.html"><img src="album/logopng.png" alt="Felix Jewelry"></a></h1>
+           <nav>
+               <ul class="main-nav-bar-links">
+                   <li><a href="catalogue.html">水水的飾品</a></li>
+                   <li><a href="cutomize.html">客製化</a></li>
+                   <li><a href="appointment.html">預約觀賞</a></li>
+                   <li><a href="fountain.html">折扣許願池</a></li>
+                   <li><a href="store.html">門市資訊</a></li>
+               </ul>
+           </nav>
+           <div class="search-nav-bar">
+                <div class="search">
+                    <input type="search" placeholder="尋找水水飾品";>
+                    <button><img src="album/magnifying-glass.png" alt="search"></button>
+                </div>
+                <div class="member">
+                    <a class="log-in" href="#">登入</a>
+                    <a class="sign-up"href="#">註冊</a>
+                </div>
+           </div>
+        </div>
+    </header>
+    <!-- 機器人/購物車 -->
+    <section>
+        <div class="side-service">
+            <div class="speaking-box">
+                <p>
+                    歡迎來到 <span>Felix Jewelry</span>,<br>
+                    可以如何幫助您呢?
+                 </p>
+                 <div class="triangle"></div>
+                 <div class="close">X</div>
+            </div>
+             <button><img src="album/bot.png" alt="service"></button>
+        </div>
+    </section>
+    <!-- 門市資訊 -->
+    <section>
+        <div class="branch">
+            <div class="store-title">
+                <img src="album/grocery-store.png" alt="客製化步驟">
+                <h2>門市資訊</h2>
+            </div>
+            <div class="store">
+                <h3>Felix Jewelry 桃園旗艦店</h3>
+                <div class="pic-and-info">
+                    <div class="pic">
+                        <img src="album/store.jpg" alt="桃園旗艦店">
+                    </div>
+                    <div class="info">
+                        <div class="txt">
+                            <div class="icon">
+                                <img src="album/phone-call.png" alt="電話">
+                                <img src="album/clock.png" alt="營業時間">
+                                <img src="album/calendar.png" alt="公休日">
+                                <img src="album/pin.png" alt="地址">
+                            </div>
+                            <div class="contact-info">
+                                <p>03-1234-5678</p>
+                                <p>11:00~9:00</p>
+                                <p>週一公休</p>
+                                <p>桃園市蘆竹區南崁路一段112號1樓</p>
+                            </div>
+                        </div>
+                        <div class="map"><iframe width="500" height="250" id="gmap_canvas" src="https://maps.google.com/maps?q=%E6%A1%83%E5%9C%92%E5%B8%82%E8%98%86%E7%AB%B9%E5%8D%80%E5%8D%97%E5%B4%81%E8%B7%AF%E4%B8%80%E6%AE%B5112%E8%99%9F1%E6%A8%93&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div>
+                    </div>
+                </div>
+            </div>
+            <div class="store">
+                <h3>Felix Jewelry 高雄奇幻店</h3>
+                <div class="pic-and-info">
+                    <div class="pic">
+                        <img src="album/store-2.jpg.png" alt="高雄奇幻店">
+                    </div>
+                    <div class="info">
+                        <div class="txt">
+                            <div class="icon">
+                                <img src="album/phone-call.png" alt="電話">
+                                <img src="album/clock.png" alt="營業時間">
+                                <img src="album/calendar.png" alt="公休日">
+                                <img src="album/pin.png" alt="地址">
+                            </div>
+                            <div class="contact-info">
+                                <p>03-1234-5678</p>
+                                <p>11:00~9:00</p>
+                                <p>週一公休</p>
+                                <p>桃園市蘆竹區南崁路一段112號1樓</p>
+                            </div>
+                        </div>
+                        <div class="map"><iframe width="500" height="250" id="gmap_canvas" src="https://maps.google.com/maps?q=%E6%A1%83%E5%9C%92%E5%B8%82%E8%98%86%E7%AB%B9%E5%8D%80%E5%8D%97%E5%B4%81%E8%B7%AF%E4%B8%80%E6%AE%B5112%E8%99%9F1%E6%A8%93&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe></div>
+                    </div>
+                </div>
+            </div>
+            <div class="appointment"><a href="appointment.html">立即預約觀賞</a></div>
+            <div class="help">需要幫忙嗎? 您可以撥打0800-1234567 或是直接與我們線上客服人員聯繫喔。</div>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="catalogue.html">水水的飾品</a></li>
+                <li><a href="cutomize.html">客製化</a></li>
+                <li><a href="appointment.html">預約觀賞</a></li>
+                <li><a href="fountain.html">折扣許願池</a></li>
+                <li><a href="store.html">門市資訊</a></li>
+            </ul>
+        </nav> 
+        <div class="social-media">
+           <a href="#"><img src="album/instagram.png" alt="IG"></a>
+           <a href="#"><img src="album/facebook.png" alt="FB"></a>
+           <a href="#"><img src="album/youtube.png" alt="YT"></a>
+           <a href="#"><img src="album/twitter.png" alt="twitter"></a>
+        </div>
+        <div class="footer-logo">
+            <a href="home.html"><img src="album/logopng.png" alt="Felix Jewelry"></a>
+        </div>
+
+        <div class="copy-right">
+            &copy;Felix Jewelry. 2021. all rights reserved!
+        </div>
+    </footer>
+</body>
+</html>

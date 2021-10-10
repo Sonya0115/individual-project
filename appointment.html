@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>預約觀賞</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="header css.css">
+    <style>
+        .main-pic{
+            width:1200px;
+            padding-top: 300px;
+            margin:auto;
+            display: flex;
+            justify-content: center;
+        }
+        .upper-pic img,.bottom-pic img{
+            width:100%;
+            vertical-align: top;
+        }
+        .upper-pic{
+            width:800px;
+            height: 533px;
+            margin-right: -600px;
+            margin-top: -100px;
+            z-index: 1;
+            box-shadow: 10px 10px 15px black;
+        }
+        .bottom-pic{
+            width:800px;
+            opacity: 0.5;
+        }
+        /* 表單 */
+        .appointment-background{
+          background-color: rgba(0,0,0,.05);
+          padding-bottom: 50px;
+        }
+        .appointment{
+            width: 1200px;
+            margin: auto;
+            margin-top: 100px;
+            
+        }
+        .form-title{
+            border-bottom: 1px solid black;
+            padding-top: 30px;
+        }
+        .form-title h2{
+            text-align: center;
+            font-size: 50px;
+            text-shadow: 5px 5px 10px black;
+        }
+        .form-title .must-fill{
+            text-align: end;
+            margin-bottom: 10px;
+        }
+        .must-fill::before{
+            content: "*";
+            color: red;
+        }
+         form{
+            font-size: 30px;
+         }
+        .select-setting{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 50px;
+            font-weight: bold;
+            font-size: 25px;
+        }
+        .spacing{
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .location {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding-top: 50px;
+            font-weight: bold;
+            font-size: 25px;
+            margin-left: -35px;
+        }
+        .star{
+            color: red;
+        }
+        .branch select{
+            width:300px;
+            font-size: 25px;
+            margin-left: auto;
+        }
+        .product-input{
+            width:280px;
+            font-size: 20px;
+            padding:10px
+        }
+        .suggest{
+            margin-bottom: 70px;
+            position: relative;
+        }
+        .suggest::after{
+            content: "請輸入500字符以內";
+            font-size: 18px;
+            width: 200px;
+            position: absolute;
+            bottom:-20px;
+            right:220px;
+            color: #888;
+        }
+        #customer-suggest{
+            resize: none;
+            width: 400px;
+            height: 300px;
+            font-size: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding:10px
+        }
+        .selection-area{
+            margin: auto;
+            width: 700px;
+        }
+        .agreement{
+            border-top: 1px solid black;
+            font-size: 20px;
+        }
+        .agreement p{
+            width:800px;
+            margin: auto;
+            line-height: 1.5em;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .check-area{
+            width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+        #ad-agree, #privacy{
+            margin-top: 50px;
+        }
+        .check-area a{
+            color: red;
+        }
+        .send{
+            width: 800px;
+            margin: auto;
+            text-align: center;
+            margin-top: 50px;
+            font-size: 0px;
+        }
+        .submit{
+            width: 100px;
+            height: 50px;
+            font-size: 30px;
+            margin-right: 30px;
+            background-color: #ff3399; 
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .cancel{
+            width: 100px;
+            height: 50px; 
+            font-size: 30px;
+            background-color: transparent; 
+            border: none;
+            cursor: pointer;
+            text-decoration: 1px underline black;
+            text-underline-offset: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 主選單 -->
+    <header>
+        <div class="main-nav-bar">
+                <h1><a href="home.html"><img src="album/logopng.png" alt="Felix Jewelry"></a></h1>
+           <nav>
+               <ul class="main-nav-bar-links">
+                   <li><a href="catalogue.html">水水的飾品</a></li>
+                   <li><a href="cutomize.html">客製化</a></li>
+                   <li><a href="appointment.html">預約觀賞</a></li>
+                   <li><a href="fountain.html">折扣許願池</a></li>
+                   <li><a href="store.html">門市資訊</a></li>
+               </ul>
+           </nav>
+           <div class="search-nav-bar">
+                <div class="search">
+                    <input type="search" placeholder="尋找水水飾品";>
+                    <button><img src="album/magnifying-glass.png" alt="search"></button>
+                </div>
+                <div class="member">
+                    <a class="log-in" href="#">登入</a>
+                    <a class="sign-up"href="#">註冊</a>
+                </div>
+           </div>
+        </div>
+    </header>
+    <!-- kv -->
+    <section class="main-pic">
+        <div class="upper-pic">
+            <img src="album/GALA.jpg" alt="門市預約">
+        </div>
+        <div class="bottom-pic">
+            <img src="album/pngtree-wedding-red-rose-white-background-image_766270.jpg" alt="底圖">
+        </div>
+    </section>
+    <!-- 表單 -->
+    <section class="appointment-background">
+        <div class="appointment">
+            <div class="form-title">
+                <h2>預約觀賞</h2>
+                <div class=must-fill>為必填項目</div>
+            </div>
+            <form action="">
+                    <div class="selection-area">
+                        <p class="location">
+                          <span><span class="star">*</span>實體或線上觀賞</span>
+                          <input type="radio" id="store" name="location" value="store" >
+                          <label for="store">實體觀賞</label><br>
+                          <input type="radio" id="online" name="location" value="online" >
+                          <label for="online">線上觀賞</label><br>
+                        </p>
+                        <p class="select-setting branch">
+                            <span class="star">*</span>預約門市
+                            <select class="spacing" name="branch">
+                                　<option value="Taoyuan">桃園旗艦店</option>
+                                　<option value="kaohsiung">高雄奇幻店</option>
+                            </select>
+                        </p>
+                        <p class="select-setting product">
+                            <label  for="product"><span class="star">*</span>目前考慮的商品</label>
+                            <input class="spacing product-input" type="text" name="product" placeholder="請輸入您想觀賞的飾品">
+                        </p>
+                        <p class="select-setting branch">
+                            <span class="star">*</span>預約來店人數
+                            <select class="spacing" name="people">
+                                　<option value="one">1人</option>
+                                　<option value="two">2人</option>
+                                　<option value="three">3人</option>
+                                　<option value="four">4人</option>
+                                　<option value="five-above">5人以上</option>
+                            </select>
+                        </p>
+                        <p class="select-setting username">
+                            <label  for="username"><span class="star">*</span>姓名</label>
+                            <input class="spacing product-input" type="text" name="username" placeholder="請輸入您的姓名">
+                        </p>
+                        <p class="select-setting phone">
+                            <label  for="phone"><span class="star">*</span>電話</label>
+                            <input class="spacing product-input" type="text" name="phone" placeholder="請輸入您的電話">
+                        </p>
+                        <p class="select-setting email">
+                            <label  for="email"><span class="star">*</span>電子信箱</label>
+                            <input class="spacing product-input" type="text" name="email" placeholder="請輸入您的電子信箱">
+                        </p>
+                        <div class="select-setting suggest">
+                                    若有任何希望或要求，<br>
+                                    歡迎告訴我們</label>
+                                <textarea name="suggest" id="customer-suggest" placeholder="歡迎跟我們說您的想法!"></textarea>
+                        </div>
+                    </div>
+                    <div class="agreement">
+                        <p>Felix jewelry將不會把您的個資外洩給第三方請您安心，若希望定期收到我們新品或是優惠好康，請在下方勾選並同意隱私權政策。</p>
+                        <div class="check-area">
+                            <input type="checkbox" id="ad-agree" name="ad-agree" value="ad">
+                            <label for="ad-agree">我想收到各項新品介紹與優惠通知</label><br>
+                            <input type="checkbox" id="privacy" name="privacy" value="privacy">
+                            <label for="privacy">我同意<a href="#">隱私權政策</a></label>
+                        </div>
+                    </div>
+                    <div class="send">
+                        <button class="submit">送出</button>
+                        <button class="cancel">取消</button>
+                    </div>
+            </form>
+        </div>
+    </section>
+     <!-- footer -->
+     <footer>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="catalogue.html">水水的飾品</a></li>
+                <li><a href="cutomize.html">客製化</a></li>
+                <li><a href="appointment.html">預約觀賞</a></li>
+                <li><a href="fountain.html">折扣許願池</a></li>
+                <li><a href="store.html">門市資訊</a></li>
+            </ul>
+        </nav> 
+        <div class="social-media">
+           <a href="#"><img src="album/instagram.png" alt="IG"></a>
+           <a href="#"><img src="album/facebook.png" alt="FB"></a>
+           <a href="#"><img src="album/youtube.png" alt="YT"></a>
+           <a href="#"><img src="album/twitter.png" alt="twitter"></a>
+        </div>
+        <div class="footer-logo">
+            <a href="home.html"><img src="album/logopng.png" alt="Felix Jewelry"></a>
+        </div>
+
+        <div class="copy-right">
+            &copy;Felix Jewelry. 2021. all rights reserved!
+        </div>
+    </footer>
+</body>
+</html>

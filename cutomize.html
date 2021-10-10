@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>客製化</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="header css.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Carattere&display=swap');
+        .banner img{
+            width: 100%;
+        }
+        .customize-steps{
+            width: 1200px;
+            margin: auto;
+        }
+        .customize-title{
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           margin: 100px 0px;
+       } 
+       .customize-title h2{
+           font-size: 60px;
+           text-shadow: 10px 1px 10px grey;
+       }
+       .customize-title img{
+           width:100px;  
+       }
+       .step{
+           width:700px;
+           margin:auto;
+           margin-bottom: 100px;
+       }
+       .step h3{
+          font-size: 25px;
+          margin: 20px 0px 0px 30px;
+       }
+       .top-step{
+           font-size: 50px;
+           text-decoration: 3px underline #ccffcc;
+           font-family: 'Carattere', cursive;
+       }
+       .step-pic img{
+           float: right;
+           width: 50%;
+           margin: 35px 0px 0px 20px;
+       }
+       .step-txt p{
+           line-height: 2.5em;
+           margin: 50px 40px 0px;
+           text-indent: 2em;
+           color: #888;
+       }
+       .step-two{
+           position: relative;
+           left:-30px
+       }
+       .reminder{
+           margin:5px 0px 0px 40px;
+           font-size: 10px;
+       }
+       .simplified{
+           width: 1200px;
+           margin: auto;
+           display: flex;
+           justify-content: space-evenly;
+           align-items: center;
+       }
+       .simplified-step{
+           width:33.333333%;
+           text-align: center;
+       }
+       .simplified-step p{
+         margin: 0px 0px 100px 30px;
+         font-size: 50px;
+         font-family: 'Carattere', cursive;
+         transform: rotate(-45deg);
+       }
+       .simplified-step h3{
+         font-size: 25px;
+         transform: rotate(-45deg); 
+       }
+       .arrow{
+           font-size: 50px;
+           animation: turnpink 3s infinite ease-in-out;
+       }
+       .flower-door{
+           margin: auto;
+           text-align: center;
+           margin-top: 100px;
+       }
+       body{
+           background-image: url(album/girl.png);
+           background-repeat: no-repeat;
+           background-position: center;
+           background-attachment: fixed;
+       }
+       @keyframes turnpink {
+           0%{ color:black}
+           100%{color: #ff3399;}
+       }
+    </style>
+</head>
+<body>
+    <!-- 主選單 -->
+    <header>
+        <div class="main-nav-bar">
+                <h1><a href="home.html"><img src="album/logopng.png" alt="Felix Jewelry"></a></h1>
+           <nav>
+               <ul class="main-nav-bar-links">
+                   <li><a href="catalogue.html">水水的飾品</a></li>
+                   <li><a href="cutomize.html">客製化</a></li>
+                   <li><a href="appointment.html">預約觀賞</a></li>
+                   <li><a href="fountain.html">折扣許願池</a></li>
+                   <li><a href="store.html">門市資訊</a></li>
+               </ul>
+           </nav>
+           <div class="search-nav-bar">
+                <div class="search">
+                    <input type="search" placeholder="尋找水水飾品";>
+                    <button><img src="album/magnifying-glass.png" alt="search"></button>
+                </div>
+                <div class="member">
+                    <a class="log-in" href="#">登入</a>
+                    <a class="sign-up"href="#">註冊</a>
+                </div>
+           </div>
+        </div>
+    </header>
+    <!-- 機器人/購物車 -->
+    <section>
+        <div class="side-service">
+            <div class="speaking-box">
+                <p>
+                    歡迎來到 <span>Felix Jewelry</span>,<br>
+                    可以如何幫助您呢?
+                 </p>
+                 <div class="triangle"></div>
+                 <div class="close">X</div>
+            </div>
+             <button><img src="album/bot.png" alt="service"></button>
+        </div>
+    </section>
+    <!-- kv -->
+    <section>
+        <div class="banner">
+            <img src="album/customize-banner.png" alt="客製化">
+        </div>
+    </section>
+    <!-- 客製化步驟 -->
+    <section>
+        <div class="customize-steps">
+            <div class="customize-title">
+                <img src="album/color-palette.png" alt="客製化步驟">
+                <h2>客製化步驟</h2>
+            </div>
+            <!-- 步驟一 -->
+            <div class="step">
+                <div class="step-pic">
+                    <img src="album/step1.png" alt="Step 1">
+    
+                </div>
+                <div class="step-txt">
+                    <div class="top-step">Step 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                    <h3>提出需求與估價</h3>
+                    <p>
+                        讓我們專業的設計師為您
+                        做出專屬您個人的飾品，若
+                        有不確定的可與我們的設計
+                        師討論希望添加的元素，現場設計師將會提出兩到三項提案讓您參考，現場
+                        提案將不會額外收取費用，確認後將於1~2天工作天與您聯繫估價。
+                    </p>
+                </div>
+            </div>
+            <!-- 步驟二 -->
+            <div class="step">
+                <div class="step-pic">
+                    <img src="album/step2.png" alt="Step 2">
+    
+                </div>
+                <div class="step-txt">
+                    <div class="top-step">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Step 2</div>
+                    <h3 class="step-two">確認原模</h3>
+                    <p>
+                        為了確保我們所製作的成
+                        品與您心中所想是一模一樣
+                        的，我們設計師將提供一份
+                        草稿圖與您做最後確認，若一切都沒有問題，便會開始製作。
+                    </p>
+                </div>
+            </div>
+            <!-- 步驟三 -->
+            <div class="step">
+                <div class="step-pic">
+                    <img src="album/step3.png" alt="Step 3">
+    
+                </div>
+                <div class="step-txt">
+                    <div class="top-step">Step 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                    <h3>完成獨一無二的寶物</h3>
+                    <p>
+                        Felix Jewerly用心將每位客戶
+                        加入我們的成品中，只為了換取
+                        您臉上的那一抹微笑，想到這裡
+                        我們迫不及待要通知您，您美美的飾品好了，我們團隊希望每對服務過的
+                        新人都有美好而難忘的一天。
+                    </p>
+                    <div class="reminder">*體醒您，飾品製作完成後，瑕疵品以外的退貨訴求皆不受理，若需要做微調將另行評估。</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 客製化簡化版 -->
+    <section>
+        <div class="simplified">
+            <div class="simplified-step">
+                <p>step 1</p>
+                <h3>提出需求與估價</h3>
+            </div>
+            <div class="arrow">→</div>
+            <div class="simplified-step">
+                <p>step 2</p>
+                <h3>確認原模</h3>
+            </div>
+            <div class="arrow">→</div>
+            <div class="simplified-step">
+                <p>step 3</p>
+                <h3>完成獨一無二的寶物</h3>
+            </div>
+        </div>
+        <div class="flower-door">
+            <img src="album/flower-door.png" alt="花門">
+        </div>
+    </section>
+     <!-- footer -->
+     <footer>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="catalogue.html">水水的飾品</a></li>
+                <li><a href="cutomize.html">客製化</a></li>
+                <li><a href="appointment.html">預約觀賞</a></li>
+                <li><a href="fountain.html">折扣許願池</a></li>
+                <li><a href="store.html">門市資訊</a></li>
+            </ul>
+        </nav> 
+        <div class="social-media">
+           <a href="#"><img src="album/instagram.png" alt="IG"></a>
+           <a href="#"><img src="album/facebook.png" alt="FB"></a>
+           <a href="#"><img src="album/youtube.png" alt="YT"></a>
+           <a href="#"><img src="album/twitter.png" alt="twitter"></a>
+        </div>
+        <div class="footer-logo">
+            <a href="home.html"><img src="album/logopng.png" alt="Felix Jewelry"></a>
+        </div>
+
+        <div class="copy-right">
+            &copy;Felix Jewelry. 2021. all rights reserved!
+        </div>
+    </footer>
+</body>
+</html>

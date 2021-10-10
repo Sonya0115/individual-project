@@ -1,0 +1,200 @@
+/* 主選單 */
+header{
+    width: 100%;
+    background: linear-gradient(black,transparent); 
+    height:100px;
+    position: absolute;
+    z-index: 1;
+}
+.search-nav-bar{
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    margin: 20px 30px 0px 0px ;
+}
+.member .log-in{
+    color:#fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+.member .log-in:hover{
+    text-decoration: 2px #fff underline;
+    text-underline-offset: 5px;
+}
+.sign-up{
+    background-color: #ff3399;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 10%;
+}
+.search{
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px white;
+    margin-right: 10px;
+}
+.search input{
+    border-radius: 10px;
+    border: none;
+    width: 200px;
+    height: 20px;
+    height: 30px;
+    outline: none;
+}
+.search input::placeholder{
+    font-size: 1.5em;
+    text-indent: 10px;
+}
+.search button{
+    border-radius: 10px;
+    width: 30px;
+    padding-top: 10px;
+    border: none;
+    background-color: #fff;
+    cursor: pointer;
+}
+.search button img{ 
+    width: 100%;
+}
+.main-nav-bar{
+    display: flex;
+    align-items: top;
+    height: 0;
+    justify-content: space-between;
+}
+.main-nav-bar img{
+    width: 150px;
+}
+.main-nav-bar-links{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 20px; 
+}
+.main-nav-bar-links a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 50px;
+}
+.main-nav-bar-links a:hover{
+    color: #ff3399;
+    text-shadow: 1px 1px 5px black;
+}    
+/* 機器人購物車 */
+.side-service{
+    position: fixed;
+    right: 0;
+    bottom:50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index:2;
+}
+.side-service img{
+    width:100px;
+}
+.speaking-box{
+    width:190px;
+    animation: hidden 10s ;
+}
+.close{
+    cursor: pointer;
+}
+.speaking-box p{
+   background-color: #fff;
+   padding: 10px;
+   border-radius: 10px;
+   margin-right: 10px;
+   position: relative;
+}
+.speaking-box .triangle{
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid #fff ;
+    position: relative;
+    bottom: 0px;
+    left:150px
+}
+.speaking-box .close{
+     padding:2px 5px;
+     background-color: #aaa;
+     color: #fff;
+     border-radius: 50%;
+     position: absolute;
+     top:-10px;
+     right:0;
+}
+.side-service p span{
+ color:#ff3399;
+}
+.side-service button{
+    border:none;
+    background-color:transparent;
+}
+.side-service a{
+ margin-right: 10px;
+}
+/* 購買按鈕/價格 */
+.price-btn{
+    display: flex;
+    align-items: center;
+}
+.price-btn a{
+    text-align: center;
+    margin: 10px 0px 0px 50px;
+}
+.price-btn a img{
+    width: 100%;
+}
+.price .orignal{
+    font-size: 20px;
+}
+.price .orignal>span{
+    text-decoration: line-through;
+}
+.price .sale{
+    font-size: 25px;
+    color:red;
+    margin: 20px 0px 30px 0px;
+    font-weight: bold;
+}
+ /* footer */
+ footer{
+    width: 1200px;
+    margin: auto;
+    background-color:#fff;
+    padding-top: 200px;
+    text-align: center;
+   }
+   .footer-links{
+       display: flex;
+       justify-content: space-evenly;
+       border-bottom: 2px solid grey;
+       padding-bottom: 20px;
+   }
+   .footer-links li>a{
+       text-decoration: none;
+       color: black;
+       font-weight: bold;
+       font-size: 25px;
+   }
+   .footer-links a:hover{
+    color: #ff3399;
+    }   
+   .social-media{
+       display: flex;
+       justify-content: center;
+   }
+   .social-media img{
+       width:50px;
+       margin:20px 0px 0px 50px;
+   }
+   .footer-logo{
+       margin: auto;
+       width: 200px;
+       margin-top: 50px;
+   }
+   .footer-logo img{
+       width: 100%;
+   }

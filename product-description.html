@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>花戀</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="header css.css">
+    <style>
+        /* 產品介紹 */
+        .product-background{
+            padding-top: 250px;
+            width: 1200px;
+            margin: auto;
+        }
+        .breadcrumb{
+            margin-bottom: 30px;
+        }
+        .breadcrumb li{
+            display: inline;
+            font-size: 20px;
+        }
+        .breadcrumb li a{
+            text-decoration: none;
+            color: #888;
+        }
+        .breadcrumb li a:hover{
+            color: #ff3399;
+            font-weight: bold;
+        }
+        .breadcrumb li+li::before{
+            content: " / ";
+            padding: 10px;
+        }
+        .product{
+            display: flex;
+        }
+        .model{
+            width: 50%;
+        }
+        .model .main-pic{
+            width: 500px;
+        }
+        .model .main-pic img{
+            width: 100%;
+            vertical-align: top;
+        }
+        .model .other-pics img{
+            width: 100px;
+            vertical-align: top;
+        }
+        .other-pics{
+            width: 500px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 30px;
+        }
+        .other-pics img{
+            width: 33.333333%;
+            cursor: pointer;
+        }
+        .other-pics :nth-child(2){
+            box-shadow: 1px 1px 10px black;
+        }
+        .other-pics button{
+            height:50px;
+            border: none;
+            background-color: #fff;
+            color: #ff3399;
+            font-size: 25px;
+            cursor: pointer;
+        }
+        .description h2{
+            font-size: 50px;
+            font-weight: bold;
+            color: #ff3399;
+            margin-bottom: 50px;
+            padding: 10px; 
+            border-radius: 10px;
+            background: linear-gradient(#ccc, transparent);
+        }
+        .description>p{
+            font-size: 20px;
+            color: #888;
+            border-bottom: 1px solid black;
+            padding: 0px 0px 10px 0px;
+        }
+        .product-page-price{
+            align-items: flex-end;
+            justify-content: space-between;
+            margin: 200px 0px 100px 0px;
+            line-height: 1em;
+        }
+        .price>p{
+            font-size: 20px;
+        }
+        .appointment{
+            width:500px;
+            font-size: 25px;
+            background: linear-gradient( transparent,#ccc);
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .appointment-link{
+            text-align: end;
+            margin-top: 20px;
+        }
+        .appointment-link>a{
+            color: #888;
+        }
+        .appointment-link>a:hover{
+            color: #ff3399;
+            font-weight: bold;
+        }
+        .selection{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-top: 5px solid black;
+            border-bottom: 5px solid black;
+            margin: 100px 0px;
+        }
+        .selection button{
+            font-size: 30px;
+            width: 40px;
+            height: 40px;
+            color: #ff3399;
+            background-color: #fff;
+            border: none;
+
+        }
+        .choose{
+            width:20%;
+            text-align: center;
+        }
+        .choose img{
+            width:200px;
+            margin-bottom: 20px;
+        }
+        .catalogue a{
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: center;
+            border-left: 5px solid black;
+            border-right: 5px solid black;
+            justify-content: space-evenly;
+        }
+        .catalogue-pic {
+            width: 100px;
+            height: 200px; 
+        }
+        .catalogue-pic img{
+            width: 100%;
+            margin: 50px 0px;
+        }
+        .last a:hover{
+            color:#ff3399;
+        }
+        .catalogue a:hover{
+            color:#ff3399
+        }
+        .next a:hover{
+            color:#ff3399
+        }
+        .choose a{
+            text-decoration: none;
+            font-size: 20px;
+            color: #888;
+        }
+        .last a{
+            text-align: center;
+            margin-top: 50px;
+        }
+        .next a{
+            text-align: center;
+        }
+        .next a{
+         margin-left:-10px
+        }
+        /* 售後服務 */
+        .information{
+            width: 1200px;
+            margin: auto;
+        }
+        .after-service{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .after-service img{
+            width: 500px;
+            border-radius: 10px;
+            z-index: 1;
+        }
+        .customer{
+            width: 600px;
+            height: 400px;
+            background-color: #888;
+            border-radius: 10px;
+            margin-left: -250px;
+            padding:20px;
+            color:#fff;
+        }
+        .customer h3{
+            width:300px;
+            padding:60px 0px 30px 0px;
+            font-size: 40px;
+            margin-left: auto;
+            margin-right: -30PX;
+        }
+        .customer p{
+            width:300px;
+            font-size: 25px;
+            line-height: 1.5em;
+            margin-left: auto;
+            margin-right: 30PX;
+        }
+        .customer a{
+            display: block;
+            width: 80px;
+            margin-left: auto;
+            margin-top: 50px;
+            font-size: 25px;
+            color: brown;
+        }
+        /* 客製化 */
+        .customize{
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: center;
+            align-items: center;
+            margin: 100px 0px 100px 220px;
+        }
+        .customize img{
+            width: 500px;
+            border-radius: 10px;
+            z-index: 1;
+        }
+        .customize-txt{
+            margin-right: -250px;
+        }
+        .customize h3{
+            margin-right: auto;
+            margin-left: 100PX;
+        }
+        .customize p{
+            margin-right: auto;
+            margin-left: 30PX;
+        }
+        .customize a{
+            margin-right: auto;
+            margin-left: 30PX;
+        }
+        /* 門市資訊 */
+        .store{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .store img{
+            width: 500px;
+            border-radius: 10px;
+            z-index: 1; 
+        }
+    </style>
+</head>
+<body>
+    <!-- 主選單 -->
+    <header>
+        <div class="main-nav-bar">
+                <h1><a href="home.html"><img src="album/logopng.png" alt="Felix Jewelry"></a></h1>
+           <nav>
+               <ul class="main-nav-bar-links">
+                   <li><a href="catalogue.html">水水的飾品</a></li>
+                   <li><a href="cutomize.html">客製化</a></li>
+                   <li><a href="appointment.html">預約觀賞</a></li>
+                   <li><a href="fountain.html">折扣許願池</a></li>
+                   <li><a href="store.html">門市資訊</a></li>
+               </ul>
+           </nav>
+           <div class="search-nav-bar">
+                <div class="search">
+                    <input type="search" placeholder="尋找水水飾品";>
+                    <button><img src="album/magnifying-glass.png" alt="search"></button>
+                </div>
+                <div class="member">
+                    <a class="log-in" href="#">登入</a>
+                    <a class="sign-up"href="#">註冊</a>
+                </div>
+           </div>
+        </div>
+    </header>
+    <!-- 機器人/購物車 -->
+    <section>
+        <div class="side-service">
+            <div class="speaking-box">
+                <p>
+                    歡迎來到 <span>Felix Jewelry</span>,<br>
+                    可以如何幫助您呢?
+                 </p>
+                 <div class="triangle"></div>
+                 <div class="close">X</div>
+            </div>
+             <button><img src="album/bot.png" alt="service"></button>
+             <a href="#"><img src="album/shopping-cart.png" alt="shopping-cart"></a>
+        </div>
+    </section>
+    <!-- 產品介紹 -->
+    <section class="product-background">
+        <div class="breadcrumb">
+            <ul>
+                <li><a href="home.html">首頁</a></li>
+                <li><a href="catalogue.html">水水的飾品</a></li>
+                <li>花戀</li>
+            </ul>
+        </div>
+        <div class="product">
+            <div class="model">
+                <div class="main-pic">
+                    <img src="album/flower-love-full.png" alt="花戀">
+                </div>
+                <div class="other-pics">
+                    <button>◀</button>
+                    <img src="album/flower-love-full.png" alt="花戀">
+                    <img src="album/small-pic-2.png" alt="花戀造型二">
+                    <img src="album/small-pic-3.png" alt="花戀造型三">
+                    <button>▶</button>
+                </div>
+            </div>
+            <div class="description">
+                <h2>花戀</h2>
+                <p>優雅又精緻的頭飾讓您成為最美的新娘，純手工製作。</p>
+                <div class="price-btn product-page-price">
+                    <div class="price">
+                        <div class="orignal">原價:<span>NT3,000</div>
+                        <div class="sale">新品優惠:NT$2,000</div>
+                        <p>立即購買即享1枚許願池金幣!</p>
+                    </div>
+                    <a href="#"><img src="album/pink-button2.png" alt="粉紅按鈕"></a>
+                </div>
+                <div class="appointment">
+                    <p>若希望現場確認商品亦可以選擇</p>
+                    <div class="appointment-link"><a href="appointment.html">預約觀賞</a></div>
+                </div>
+            </div>
+        </div>
+        <!-- 上一個品項/下一個品項 -->
+        <div class="selection">
+            <button class="choose">◀</button>
+           <div class="choose last"> 
+                <a href="#">
+                  <img src="album/flower-lang-noback2.png" alt="花語">
+                  <div>花語</div>
+                </a>
+            </div>
+            <div class="choose catalogue">
+                <a href="catalogue.html">
+                      <div class="catalogue-pic">
+                          <img src="album/menu.png" alt="飾品一覽">
+                      </div>
+                  <div>飾品一覽</div>
+                </a>
+            </div>
+            <div class="choose next">
+                <a href="#">
+                  <img src="album/seduce-noback.png" alt="迷惑">
+                  <div>迷惑</div>
+               </a>
+            </div>
+            <button class="choose">▶</button>
+        </div>
+    </section>
+    <!-- 售後服務 -->
+    <section class="information">
+        <div class="after-service">
+            <img src="album/B3-DIPLOMA-IN-JEWELERY-MAKING.jpg" alt="售後服務">
+            <div class="customer after-service-txt">
+                <h3>售後服務</h3>
+                <p>為了確保您的飾品可以一直保持最好的狀態， Felix Jewerly 提供了2年保固，
+                    超過保固期限亦可付費做保養修改。</p>
+                <a href="#">more</a>
+            </div>            
+        </div>
+        <div class=" customize">
+            <img src="album/istockphoto-155428452-612x612.jpg" alt="">    
+            <div class="customer customize-txt">
+                <h3>客製化</h3>
+                <p>有看到喜歡的元素，但還不是百分百吻合您所想要的樣子嗎?Felix Jewelry也提供給客製化的選項喔!</p>
+                <a href="cutomize.html">more</a>
+            </div>
+        </div>
+        <!-- 門市資訊 -->
+        <div class="store">
+            <img src="album/GALA-BRIDAL-jewelry-by-Ichiro-Nishiwaki-Design-Office-Tokyo-Japan-04.jpg" alt="">    
+            <div class="customer store-txt">
+                <h3>門市外觀</h3>
+                <p>Felix Jewelry提供您舒適、專業的環境，讓您可以現場觀賞您所喜愛的飾品。</p>
+                <a href="store.html">more</a>
+            </div>
+        </div>
+    </section>    
+    <!-- footer -->
+    <footer>
+        <nav>
+            <ul class="footer-links">
+                <li><a href="catalogue.html">水水的飾品</a></li>
+                <li><a href="cutomize.html">客製化</a></li>
+                <li><a href="appointment.html">預約觀賞</a></li>
+                <li><a href="fountain.html">折扣許願池</a></li>
+                <li><a href="store.html">門市資訊</a></li>
+            </ul>
+        </nav> 
+        <div class="social-media">
+           <a href="#"><img src="album/instagram.png" alt="IG"></a>
+           <a href="#"><img src="album/facebook.png" alt="FB"></a>
+           <a href="#"><img src="album/youtube.png" alt="YT"></a>
+           <a href="#"><img src="album/twitter.png" alt="twitter"></a>
+        </div>
+        <div class="footer-logo">
+            <a href="home.html"><img src="album/logopng.png" alt="Felix Jewelry"></a>
+        </div>
+
+        <div class="copy-right">
+            &copy;Felix Jewelry. 2021. all rights reserved!
+        </div>
+    </footer>
+</body>
+</html>

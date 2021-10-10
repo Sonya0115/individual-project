@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>折扣許願池</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="header css.css">
+    <style>
+        /* 主選單 */
+        .member{
+            display: flex;
+            font-size: 18px;
+        }
+        .logged-in{
+            margin:0px 20px;
+            color: #ff3399;
+        }
+        .logged-in a{
+            color: #ff3399;
+            text-underline-offset: 5px;
+        }
+        .log-out{
+            color: #fff;
+            text-decoration: none;
+        }
+        .log-out:hover{
+            text-decoration: 1px underline #fff;
+            text-underline-offset: 5px;
+        }
+        /* 金幣桶 */
+        .speaking-box .close{
+            background-color: red;
+            padding:5px 8px;
+            right:10px;
+        }
+        /* 許願池 */
+        .forest{
+            background-image: url(album/forest.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: relative;
+        }
+        .fountain{
+            width: 1200px;
+            height: 1200px;
+            margin: auto;
+            text-align: center;
+            
+        }
+        .fountain img{
+            margin-top: 100px;
+            width: 800px;
+        }
+        .distance{
+            width: 700px;
+            height:40px;
+            background-color: #99ff00;
+            position: relative;
+            border-radius: 10px;
+            bottom:200px;
+            left:275px;
+        }
+        .distance img{
+            width: 100px;
+            position: absolute;
+            top:-130px;
+            left: 0;
+            box-shadow: 5px 5px 10px black;
+            border-radius: 50%;
+            animation: run 5s infinite alternate paused;
+        }
+        .distance img:hover{
+            animation-play-state:running;
+        }
+        .strength{
+            margin-left: auto;
+            width: 40px;
+            height:500px;
+            background: linear-gradient(#ff6633,#ffcc66,#ffcc99);
+            position: relative;
+            border-radius: 10px;
+            right: 200px;
+            bottom:800px
+        }
+        .triangle{
+            border-right: 30px solid red;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            position: absolute;
+            right:-35px;
+            animation: jump 2s infinite alternate paused;
+        }
+        .triangle:hover{
+            animation-play-state:running;
+        }
+        .start{
+            width:300px;
+            position: absolute;
+            bottom:50px;
+            left:0;
+            right:0;
+            margin: auto;
+            font-size: 30px;
+            border-radius: 10px;
+            border: none;
+            background-color: transparent;
+        }
+        .start::before{
+            content: "開始遊戲";
+            color:#fff;
+            position: relative;
+            top: 65px;
+        }
+        @keyframes run {
+            0%{left:0px}
+            100%{left:650px}
+        }
+        @keyframes jump {
+            0%{top:0px}
+            100%{top:480px}
+        }
+        .introduction{
+            width: 1200px;
+            margin: auto;
+            background-image: url(album/pngwing.com.png);
+            background-size: cover;
+            padding: 200px 0px;
+        }
+        .introduction h2{
+            font-size: 40px;
+            text-align: center;
+            margin-bottom: 50px;
+            font-weight: bold;
+        }
+        .story{
+            width: 700px;
+            margin: auto;
+            font-size: 25px;
+            line-height: 2em;
+        }
+        .reminder{
+            margin-top: 50px;
+        }
+        .green-bar{
+            color:#66cc00;
+        }
+        .orange-bar{
+            color: #ff6633;
+        }
+        /* 遊戲介紹 */
+        .trophy-intro{
+            width: 1200px;
+            display: flex;
+            margin: auto;
+        }
+        .trophy{
+            width:33.333333%
+        }
+        .trophy img{
+            width: 100%;
+        }
+        .trophy p{
+            width: 300px;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.5em;
+        }
+    </style>
+</head>
+<body>
+<!-- 主選單 -->
+<header>
+    <div class="main-nav-bar">
+            <h1><a href="home.html"><img src="album/logopng.png" alt="Felix Jewelry"></a></h1>
+       <nav>
+           <ul class="main-nav-bar-links">
+               <li><a href="catalogue.html">水水的飾品</a></li>
+               <li><a href="cutomize.html">客製化</a></li>
+               <li><a href="appointment.html">預約觀賞</a></li>
+               <li><a href="fountain.html">折扣許願池</a></li>
+               <li><a href="store.html">門市資訊</a></li>
+           </ul>
+       </nav>
+       <div class="search-nav-bar">
+            <div class="search">
+                <input type="search" placeholder="尋找水水飾品";>
+                <button><img src="album/magnifying-glass.png" alt="search"></button>
+            </div>
+            <div class="member">
+                <div class="logged-in"><a  href="#">郝美麗</a>，您好</div>
+                <a class="log-out"href="#">登出</a>
+            </div>
+       </div>
+    </div>
+</header>
+<!-- 金幣桶 -->
+<section>
+    <div class="side-service">
+        <div class="speaking-box">
+             <div class="close">1</div>
+        </div>
+         <button><img src="album/gold-pot.png" alt="service"></button>
+    </div>
+</section>
+<!-- 許願池   -->
+<section>
+    <div class="forest">
+        <div class="fountain">
+            <img src="album/no-background.png" alt="許願池">
+            <div class="distance">
+                <img src="album/money.png" alt="金幣">
+            </div>
+            <div class="strength">
+                <div class="triangle"></div>
+            </div>
+        </div>
+        <button class="start"><img src="album/button.png" alt=""></button>
+    </div>
+</section>
+<!-- 遊戲介紹 -->
+<section>
+    <div class="introduction">
+        <h2>遊戲介紹</h2>
+        <p class="story">一直以來，人們會投入硬幣或其他有價值的物品，希望神靈可以保佑他們，讓他們的願望成真。Felix Jewelry也想讓您的願望成真，於是建造了這個折扣之泉。您只要抓好<span class="green-bar">下方綠條的距離</span>對準，並且使用夠多<span class="orange-bar">右側橘條的力道</span>讓您的硬幣能投中許願池的最上方，我們便會依照您投中位置給予相對的折扣券喔~  趕緊來玩一把吧!
+        </p>    
+        <p class="story reminder">貼心提醒:遊戲是先抓好距離才開始使用力道喔!</p>
+    </div>
+</section>
+<!-- 獎項介紹 -->
+<section>
+    <div class="trophy-intro">
+        <div class="trophy">
+            <img src="album/first.png" alt="大獎">
+            <p>
+                只要頭中了許願池最高層，便可以得到大獎喔!限定飾品可以做7折優惠。
+            </p>
+        </div>
+        <div class="trophy">
+            <img src="album/second.png" alt="二獎">
+            <p>
+                沒投中最上層嗎?沒關係，投中第二層還是會有8折優惠的喔!
+            </p>
+        </div>
+        <div class="trophy">
+            <img src="album/third.png" alt="安慰獎">
+            <p>
+                上面兩層都沒投中嗎? Felix Jewelry不希望任何玩遊戲的人有失望的感覺，所以人人有獎拉~ 只要有投出就會有 9折優惠喔!
+            </p>
+        </div>
+    </div>
+</section>
+<!-- footer -->
+<footer>
+    <nav>
+        <ul class="footer-links">
+            <li><a href="catalogue.html">水水的飾品</a></li>
+            <li><a href="cutomize.html">客製化</a></li>
+            <li><a href="appointment.html">預約觀賞</a></li>
+            <li><a href="fountain.html">折扣許願池</a></li>
+            <li><a href="store.html">門市資訊</a></li>
+        </ul>
+    </nav> 
+    <div class="social-media">
+       <a href="#"><img src="album/instagram.png" alt="IG"></a>
+       <a href="#"><img src="album/facebook.png" alt="FB"></a>
+       <a href="#"><img src="album/youtube.png" alt="YT"></a>
+       <a href="#"><img src="album/twitter.png" alt="twitter"></a>
+    </div>
+    <div class="footer-logo">
+        <a href="home.html"><img src="album/logopng.png" alt="Felix Jewelry"></a>
+    </div>
+
+    <div class="copy-right">
+        &copy;Felix Jewelry. 2021. all rights reserved!
+    </div>
+</footer>
+</body>
+</html>
