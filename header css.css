@@ -38,13 +38,10 @@ header{
     border-radius: 10px;
     border: none;
     width: 200px;
-    height: 20px;
     height: 30px;
     outline: none;
-}
-.search input::placeholder{
-    font-size: 1.5em;
-    text-indent: 10px;
+    font-size: 25px;
+    margin-left: 5px;
 }
 .search button{
     border-radius: 10px;
