@@ -1,7 +1,7 @@
 /* 主選單 */
 header{
     width: 100%;
-    background: linear-gradient(black,transparent); 
+    background: linear-gradient(rgba(0,0,0,0.3),transparent); 
     height:100px;
     position: absolute;
     z-index: 1;
@@ -9,8 +9,9 @@ header{
 .search-nav-bar{
     display: flex;
     align-items: center;
-    padding-top: 10px;
-    margin: 20px 30px 0px 0px ;
+    margin: 10px 30px 0px 0px ;
+    height:40px;
+    /* background-color: green; */
 }
 .member .log-in{
     color:#fff;
@@ -33,12 +34,13 @@ header{
     border-radius: 10px;
     box-shadow: 1px 1px 5px white;
     margin-right: 10px;
+    flex-grow:1;
 }
 .search input{
     border-radius: 10px;
     border: none;
     width: 200px;
-    height: 30px;
+    /* height: 20px; */
     outline: none;
     font-size: 18px;
     margin-left: 5px;
@@ -57,16 +59,21 @@ header{
 .main-nav-bar{
     display: flex;
     align-items: top;
-    height: 0;
-    justify-content: space-between;
+    height: 100px;
+    justify-content: space-evenly;
+    /* background-color: red; */
 }
 .main-nav-bar img{
     width: 150px;
 }
+.main-nav-bar nav{
+    flex-grow: 1;
+}
 .main-nav-bar-links{
     display: flex;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
     margin-top: 20px; 
+    flex-grow: 1;
 }
 .main-nav-bar-links a{
     text-decoration: none;
@@ -83,14 +90,14 @@ header{
 .side-service{
     position: fixed;
     right: 0;
-    bottom:50px;
+    bottom:0px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     z-index:2;
 }
 .side-service img{
-    width:100px;
+    width:50px;
 }
 .speaking-box{
     width:190px;
@@ -103,15 +110,15 @@ header{
    background-color: #fff;
    padding: 10px;
    border-radius: 10px;
-   margin-right: 10px;
+   margin: 0px 10px 20px 0px;
    position: relative;
 }
-.speaking-box .triangle{
+.white-triangle{
     border-bottom: 20px solid transparent;
-    border-left: 20px solid #fff ;
-    position: relative;
-    bottom: 0px;
-    left:150px
+    border-left: 20px solid white ;
+    position: absolute;
+    right: 20px;
+    top: 50px;
 }
 .speaking-box .close{
      padding:2px 5px;
@@ -146,6 +153,7 @@ header{
 }
 .price .orignal{
     font-size: 20px;
+    font-style: italic;
 }
 .price .orignal>span{
     text-decoration: line-through;
@@ -194,4 +202,7 @@ header{
    }
    .footer-logo img{
        width: 100%;
+   }
+   .current-page a{
+    color: #ff3399;
    }
