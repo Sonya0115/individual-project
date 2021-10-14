@@ -43,15 +43,10 @@
             right:0;
             z-index: 1;
        }
-       
        /* 新品介紹 */
        .new-items{
            width: 1200px;
            margin: auto;
-           background-image: url(album/3804861557_763b84b74e_c.png); 
-           background-repeat: no-repeat;
-           background-position: center;
-           background-attachment:fixed; 
        }
        .new-item-title h2{
           font-size: 50px;
@@ -203,8 +198,69 @@
         /* 品牌理念 */
         .brand-background{
             background-color: rgba(0,0,0,.03);
-            padding-top: 50px;
-            margin-top: 200px;
+            padding: 50px 0px;
+            margin-top: 300px;
+            position: relative;
+            z-index: 1;
+        }
+        .circle{
+            width: 170px;
+            height: 98px;
+            position: absolute;
+            top:-13%;
+            left: 11%;
+            background:  rgba(0,0,0,.03);
+            border-radius: 100px 100px 0 0;
+            
+        }
+        .circle2{
+            width: 170px;
+            height: 98px;
+            position: absolute;
+            top:0;
+            left: 45%;
+            background:  #fff;
+            border-radius: 0 0 100px 100px;
+        }
+        .circle3{
+            width: 170px;
+            height: 98px;
+            position: absolute;
+            top:-13%;
+            right: 11%;
+            background: rgba(0,0,0,.03);
+            border-radius: 100px 100px 0 0;
+            
+        }
+        .circle4{
+            width: 170px;
+            height: 97px;
+            position: absolute;
+            bottom:-13%;
+            left: 11%;
+            background: rgba(0,0,0,.03);
+            border-radius:  0 0 100px 100px;
+            
+        }
+        .circle5{
+            width: 170px;
+            height: 98px;
+            position: absolute;
+            bottom:0;
+            left: 45%;
+            background:  #fff;
+            border-radius:100px 100px 0 0 ;
+            
+        }
+        .circle6{
+            width: 170px;
+            height: 97px;
+            position: absolute;
+            bottom:-13%;
+            right: 11%;
+            background: rgba(0,0,0,.03);
+            border-radius: 0 0 100px 100px;
+            
         }
         .brand{
             width: 1200px;
@@ -322,7 +378,6 @@
            right: 135px;
            vertical-align: top;
        }
-      
     </style>
 </head>
 <body>
@@ -369,7 +424,7 @@
     </section>
     <!-- 幻燈片 -->
     <div class="slider">
-        <img src="album/married.png" alt="Happy Wedding">
+        <img src="album/married-2.png" alt="Happy Wedding">
         <button class="left-btn">◀</button>
         <button class="right-btn">▶</button>
     </div>
@@ -445,7 +500,6 @@
                    <a href="cutomize.html">
                      <img src="album/customize.png" alt="客製化">
                      <p>我們也有提供客製化選擇，提供專屬於您的飾品。</p>
-               </div>
            </div>
            <div class="service">
                <h3>門市資訊</h3>
@@ -458,6 +512,9 @@
     </section>
     <!-- 品牌理念 -->
     <section class="brand-background">
+        <div class="circle"></div>
+        <div class="circle2"></div>
+        <div class="circle3"></div>
         <div class="brand">
             <div class="brand-title">
                 <h2>品牌理念</h2>
@@ -477,6 +534,9 @@
                     </div>
             </div>
         </div>
+        <div class="circle4"></div>
+        <div class="circle5"></div>
+        <div class="circle6"></div>
     </section>
     <!-- 聯絡我們 -->
     <section class="contact-background">
