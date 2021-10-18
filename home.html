@@ -7,6 +7,10 @@
     <title>Felix Jewelry</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="header css.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <script src="//s3-ap-northeast-1.amazonaws.com/justfont-user-script/jf-63454.js"></script>
     <style>
        .slider{
            height: 100%;
@@ -43,6 +47,30 @@
             right:0;
             z-index: 1;
        }
+       .welcome{
+           position: absolute;
+           top:20%;
+           left: 17%;
+           line-height: 1.5em;
+           text-indent: -5em;
+           font-size: 3rem;
+           color: #b8895b;
+           font-family: 'Great Vibes', cursive;
+       }
+       .welcome span{
+        padding: 6px 15px;
+       }
+       .welcome .first-line{
+           background: linear-gradient(
+               315deg, 
+               rgba(255, 255, 255, .7)22%, 
+               rgba(255, 255, 255, 0)63%);
+               border-radius: 0px 10px 0px 0px;
+       }
+       .welcome .second-line{
+        background: linear-gradient(124deg, rgba(255, 255, 255, 0)10%, rgba(255, 255, 255, 0.7)25%);
+           border-radius: 0px 10px 10px 10px;
+       }
        /* 新品介紹 */
        .new-items{
            width: 1200px;
@@ -65,9 +93,13 @@
        .model{
            width: 50%;
        }
-       .model img{
+       .model-img{
           vertical-align: middle;
           width: 100%;
+          transition: 2s;
+       }
+       .model-img:hover{
+          opacity: .5; 
        }
        .describe{
         margin: 50px 0px 0px 50px;  
@@ -75,16 +107,18 @@
        }
        .describe h3{
            font-size: 45px;
-           text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
        }
        .describe>p{
            font-size: 20px;
            margin:30px 5px; 
            color:#888;
        }
-       .describe h3 a{
+       .describe-link{
         text-decoration: none;
         color: black;   
+       }
+       .describe-link:hover .model-img{
+          opacity: .5;
        }
        .second-new-product{
            display: flex;
@@ -101,7 +135,6 @@
        }
        .second-describe h3{
            font-size: 45px;
-           text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
            margin-right: 20px;
        }
        .second-describe>p{
@@ -161,12 +194,15 @@
        }
        .service{
            width: 40%;
-           max-height:400px;
+           height:400px;
            overflow: hidden;
        }
        .service img{
            width: 100%;
            vertical-align: top;
+           transform:scale(1 , 1);
+           transition: 2s;
+           overflow: hidden;
        }
        .one-of-a-kind h3{
            font-size: 30px;
@@ -176,7 +212,7 @@
        }
        .one-of-a-kind p{
            font-size: 20px;
-           padding:10px;
+           padding:15px;
            text-align: center;
            color: #fff;
            background: linear-gradient(
@@ -193,7 +229,7 @@
         transform: translateY(-100%);
        }
        .service img:hover{
-           opacity: .5;
+        transform:scale(1.2 , 1.2);
        }
         /* 品牌理念 */
         .brand-background{
@@ -205,7 +241,7 @@
         }
         .circle{
             width: 170px;
-            height: 98px;
+            height: 97px;
             position: absolute;
             top:-13%;
             left: 11%;
@@ -224,7 +260,7 @@
         }
         .circle3{
             width: 170px;
-            height: 98px;
+            height: 97px;
             position: absolute;
             top:-13%;
             right: 11%;
@@ -234,9 +270,9 @@
         }
         .circle4{
             width: 170px;
-            height: 97px;
+            height: 90px;
             position: absolute;
-            bottom:-13%;
+            bottom:-12%;
             left: 11%;
             background: rgba(0,0,0,.03);
             border-radius:  0 0 100px 100px;
@@ -254,9 +290,9 @@
         }
         .circle6{
             width: 170px;
-            height: 97px;
+            height: 90px;
             position: absolute;
-            bottom:-13%;
+            bottom:-12%;
             right: 11%;
             background: rgba(0,0,0,.03);
             border-radius: 0 0 100px 100px;
@@ -415,7 +451,7 @@
                     可以如何幫助您呢?
                  </p>
                  <div class="white-triangle"></div>
-                 <div class="close">X</div>
+                 <button class="close">X</button>
             </div>
              <button><img src="album/bot.png" alt="service"></button>
              <a href="fountain.html"><img src="album/gold-pot.png" alt="service"></a>
@@ -424,9 +460,12 @@
     </section>
     <!-- 幻燈片 -->
     <div class="slider">
-        <img src="album/married-2.png" alt="Happy Wedding">
+        <img src="album/nizuc-cancun-wedding.jpg" alt="Happy Wedding">
         <button class="left-btn">◀</button>
         <button class="right-btn">▶</button>
+        <p class="welcome"><span class="first-line">Welcome to Felix Jewelry</span><br>
+           <span class="second-line">Where fantasies come true</span>
+        </p>
     </div>
     <!-- 新品介紹 -->
     <section class="new-items">
@@ -436,10 +475,10 @@
         <!-- 第一品項 -->
         <div class="new-product">
             <div class="model">
-                <a href="product-description.html"><img src="album/flower-love.png" alt="花戀"></a>
+                <a href="product-description.html"><img src="album/flower-love.png" alt="花戀" class="model-img"></a>
             </div>
             <div class="describe">
-                <h3><a href="product-description.html">花戀</a></h3>
+                <h3 ><a class="describe-link" href="product-description.html">花戀</a></h3>
                 <p>優雅又精緻的頭飾，<br>
                         讓您成為最美的新娘，<br>
                         純手工製作。</p>
@@ -455,7 +494,7 @@
             <!-- 第二品項 -->
             <div class="second-new-product">
                 <div class="model">
-                   <a href="#"><img src="album/flower-lang.png" alt="花語"></a>
+                   <a href="#"><img src="album/flower-lang.png" alt="花語" class="model-img"></a>
                 </div> 
                 <div class="second-describe">
                     <h3><a href="#">花語</a></h3>
@@ -474,10 +513,10 @@
             <!-- 第三品項 -->
             <div class="new-product">
                 <div class="model">
-                    <a href="#"><img src="album/seduce-3.png" alt="迷惑"></a>
+                    <a href="#"><img src="album/seduce-3.png" alt="迷惑"class="model-img"></a>
                 </div>
                 <div class="describe">
-                    <h3><a href="#">迷惑</a></h3>
+                    <h3><a href="#" class="describe-link">迷惑</a></h3>
                     <p>藍色系給人夢幻的感覺，<br>或許婚禮是奇幻的旅程的起點。</p>
                     <div class="price-btn">
                         <div class="price">
@@ -491,7 +530,7 @@
             <div class="more">
                 <a href="catalogue">更多飾品</a>
             </div>  
-     </section>        
+    </section>        
     <!-- 客製化 -->
     <section>
        <div class="one-of-a-kind">
@@ -500,6 +539,7 @@
                    <a href="cutomize.html">
                      <img src="album/customize.png" alt="客製化">
                      <p>我們也有提供客製化選擇，提供專屬於您的飾品。</p>
+                   </a> 
            </div>
            <div class="service">
                <h3>門市資訊</h3>

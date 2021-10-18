@@ -124,13 +124,13 @@ header{
     top: 50px;
 }
 .speaking-box .close{
-     padding:2px 5px;
-     background-color: #aaa;
-     color: #fff;
-     border-radius: 50%;
-     position: absolute;
-     top:-10px;
-     right:0;
+    padding:2px 5px;
+    background-color: #aaa;
+    color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top:-10px;
+    right:0;
 }
 .side-service p span{
  color:#ff3399;
