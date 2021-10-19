@@ -87,7 +87,7 @@ header{
 }
 .main-nav-bar-links a:hover{
     color: #ff3399;
-    text-shadow: 1px 1px 5px black;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.03);
 }    
 /* 機器人購物車 */
 .side-service{

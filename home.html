@@ -52,7 +52,7 @@
            position: absolute;
            top:20%;
            left: 17%;
-           line-height: 1.5em;
+           line-height: 4.5rem;
            text-indent: -5em;
            font-size: 3rem;
            color: #b8895b;
@@ -88,9 +88,6 @@
           /* margin: 50px; */
           color: #cc9966;
           text-shadow: 1px 1px 5px rgba(204, 153, 102, .3);
-       }
-       .new-item-title img{
-           width:100px;  
        }
        .new-product{
            width: 1200px;
@@ -238,7 +235,7 @@
        }
         /* 品牌理念 */
         .brand-background{
-            background-color: rgba(105, 214, 160, 0.5);
+            background-color: rgba(105, 214, 160, 0.3);
             padding: 50px 0px;
             /* margin-top: 300px; */
             position: relative;
@@ -250,7 +247,7 @@
             position: absolute;
             bottom:-12%;
             left: 11%;
-            background: #aaeecc;
+            background: #d2f3e2;
             border-radius:  0 0 100px 100px;
             
         }
@@ -270,7 +267,7 @@
             position: absolute;
             bottom:-12%;
             right: 11%;
-            background: #aaeecc;
+            background:  #d2f3e2;
             border-radius: 0 0 100px 100px;
             
         }
@@ -321,12 +318,20 @@
         }
         /* 聯絡我們 */
         .contact-background{
-            background: rgba(255, 251, 6, 0.3); 
-            padding:100px 0px;
+            background: linear-gradient(180deg, rgba(255, 251, 6, 0.3)60%, rgba(255, 255, 255, 0)100%);
+            padding:100px 0px 200px 0px;
         }
         .contact{
             width: 1200px;
             margin: auto;
+        }
+        .phone{
+            text-align: center;
+            line-height: 1.5em;
+        }
+        .or{
+            font-size:60px;
+            font-family: 'Great Vibes', cursive;
         }
         .contact-joinus-title{
             margin-bottom: 100px;
@@ -352,47 +357,46 @@
        }
        /* 許願池 */
        .join-us-background{
-        background: linear-gradient(transparent, #ff99cc, transparent);
-        margin-top: 200px;
-        padding: 300px 0px;
-        text-align: center;
+        font-size: 2rem;
+        margin-top: -200px;
+       }
+       .collection{
+           width: 1200px;
+           margin: auto;
+           display: flex;
+           align-items: center;
+           position: relative;
+       }
+       .excited{
+           color: #fff;
+           text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+           font-style: italic;
+           position: relative;
+           top:20px;
        }
        .earn-coin{
            display: flex;
            justify-content: center;
-           font-size: 40px;
-           margin-bottom: 50px;
+           width:70%
        }
-       .earn-coin p{
-           color: #fff;
-           text-shadow: 1px 1px 5px black;
+       .earn-coin .sign-up{
+           font-size: 1.5rem;
+           margin-left: 10%;
+           height:25px;
+           
+        }
+        .fountain{
+           color: #888;
        }
-       .earn-coin span{
-           color: #66ff99;
+       .fountain:hover{
+           color: #ff3399;
        }
-       .earn-coin>.sign-up{
-           font-size: 25px;
-           padding: 10px 30px;
-           margin-left: 100px;
-           border-radius: 10px;
+       .title-model{
+           width:30%
        }
-       .hands-with-coin{
-           display: flex;
-           justify-content: space-evenly;
-       }
-       .hands-with-coin .one-pair{
-         width: 25%;
-         position: relative;
-       }
-       .one-pair .hand{
-           width: 70%;
-           vertical-align: top;
-       }
-       .one-pair .coin{
-           width: 30%;
-           position: absolute;
-           right: 135px;
-           vertical-align: top;
+       .title-model img{
+           width: 100%;
+           border-radius: 0px 50px 0px 50px;
        }
     </style>
 </head>
@@ -565,37 +569,30 @@
                 <h2>聯絡我們</h2>
             </div>
             <div class="contact-us">
-                <div class="phone">連絡電話:0800-1234567</div>
+                <div class="phone">
+                    <p>您可以選擇撥打<br>
+                        客服連絡電話:0800-1234567</p>
+                </div>
+                <div class="or">or</div>
                 <div class="appointment"><a href="appointment.html">立即線上預約</a></div>
             </div>
         </div>  
     </section> 
-    <!-- 許願池 -->
+    <!-- 許願池 -->        
     <section class="join-us-background">
-                <div class="earn-coin">
-                    <p>立即加入即享一枚<span>許願池</span>金幣!</p>
-                    <a class="sign-up"href="#">註冊</a>
-                </div>
-                <div class="hands-with-coin">
-                    <div class="one-pair">
-                        <img class="hand" src="album/pray.png" alt="手">
-                        <img class="coin" src="album/money.png" alt="金幣">
-                    </div>
-                    <div class="one-pair">
-                        <img class="hand" src="album/pray.png" alt="手">
-                        <img class="coin" src="album/money.png" alt="金幣">
-                    </div>
-                    <div class="one-pair">
-                        <img class="hand" src="album/pray.png" alt="手">
-                        <img class="coin" src="album/money.png" alt="金幣">
-                    </div>
-                    <div class="one-pair">
-                        <img class="hand" src="album/pray.png" alt="手">
-                        <img class="coin" src="album/money.png" alt="金幣">
-                    </div>
-                </div>
-    </section>
+      <div class="collection">
+            <div class="title-model">
+                <p class="excited">心動了嗎?</p>
+                <img src="album/janniebaltzer-2014-38.jpg" alt="">
+            </div>
+            <div class="earn-coin">
+                <p>立即加入即享一枚<a class="fountain" href="fountain.html">許願池</a>金幣!</p>
+                <a class="sign-up"href="#">註冊</a>
+            </div> 
+        </div>    
+    </section>      
     <!-- footer -->
+    
     <footer>
         <nav>
             <ul class="footer-links">
