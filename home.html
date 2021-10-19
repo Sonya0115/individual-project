@@ -19,6 +19,7 @@
        }
        .slider img{
            width: 100%;
+           vertical-align: top;
        }
        .slider button{
            width:50px;
@@ -72,14 +73,21 @@
            border-radius: 0px 10px 10px 10px;
        }
        /* 新品介紹 */
+       .new-items-background{
+           background-image: url(album/rm272-adj-06-e2.png);
+           background-repeat: no-repeat;
+           background-size: cover;
+           padding: 100px 0px;
+       }
        .new-items{
            width: 1200px;
            margin: auto;
        }
        .new-item-title h2{
           font-size: 50px;
-          margin: 50px;
+          /* margin: 50px; */
           color: #cc9966;
+          text-shadow: 1px 1px 5px rgba(204, 153, 102, .3);
        }
        .new-item-title img{
            width:100px;  
@@ -194,7 +202,7 @@
        }
        .service{
            width: 40%;
-           height:400px;
+           /* height:400px; */
            overflow: hidden;
        }
        .service img{
@@ -220,81 +228,49 @@
             #ff0066 0%, 
             #ff33cc 100%);
             transition: transform 1s;
-            transform: translateY(0%);
+            position: relative;
        }
        .one-of-a-kind a{
            text-decoration: none; 
-       }
-       .service:hover p{
-        transform: translateY(-100%);
        }
        .service img:hover{
         transform:scale(1.2 , 1.2);
        }
         /* 品牌理念 */
         .brand-background{
-            background-color: rgba(0,0,0,.03);
+            background-color: rgba(105, 214, 160, 0.5);
             padding: 50px 0px;
-            margin-top: 300px;
+            /* margin-top: 300px; */
             position: relative;
             z-index: 1;
         }
         .circle{
             width: 170px;
-            height: 97px;
-            position: absolute;
-            top:-13%;
-            left: 11%;
-            background:  rgba(0,0,0,.03);
-            border-radius: 100px 100px 0 0;
-            
-        }
-        .circle2{
-            width: 170px;
-            height: 98px;
-            position: absolute;
-            top:0;
-            left: 45%;
-            background:  #fff;
-            border-radius: 0 0 100px 100px;
-        }
-        .circle3{
-            width: 170px;
-            height: 97px;
-            position: absolute;
-            top:-13%;
-            right: 11%;
-            background: rgba(0,0,0,.03);
-            border-radius: 100px 100px 0 0;
-            
-        }
-        .circle4{
-            width: 170px;
             height: 90px;
             position: absolute;
             bottom:-12%;
             left: 11%;
-            background: rgba(0,0,0,.03);
+            background: #aaeecc;
             border-radius:  0 0 100px 100px;
             
         }
-        .circle5{
+        .circle1{
             width: 170px;
             height: 98px;
             position: absolute;
             bottom:0;
             left: 45%;
-            background:  #fff;
+            background: #ffffbb;
             border-radius:100px 100px 0 0 ;
             
         }
-        .circle6{
+        .circle2{
             width: 170px;
             height: 90px;
             position: absolute;
             bottom:-12%;
             right: 11%;
-            background: rgba(0,0,0,.03);
+            background: #aaeecc;
             border-radius: 0 0 100px 100px;
             
         }
@@ -316,6 +292,7 @@
         }
         .idea{
             width:33.333333%;
+            margin: auto;
         }
         .idea h3{
             font-size: 25px;
@@ -325,31 +302,37 @@
             margin: auto;
         }
         .idea img{
-            width: 100%;
+            width: 70%;
             vertical-align: top;
         }
-        .one-and-only{
-            margin: auto;
+        .carefully-made{
             position: relative;
-            top: -90px;
-            left:-50px
+            top:-10%;
+        }
+        .one-and-only{
+            position: relative;
+            top: -35%;
+            left:-18%;
         }
         .touching{
-            margin-left: auto;
             position: relative;
-            top: -180px;
-            left:-100px
+            top: -93%;
+            left:18%;
         }
         /* 聯絡我們 */
         .contact-background{
+            background: rgba(255, 251, 6, 0.3); 
+            padding:100px 0px;
+        }
+        .contact{
             width: 1200px;
             margin: auto;
-            margin-top: 200px;
         }
         .contact-joinus-title{
             margin-bottom: 100px;
         }
         .contact-joinus-title h2{
+           margin-top: 100px;
            font-size: 50px;
            color: #cc9966;
         }
@@ -358,14 +341,11 @@
             align-items: center;
             font-size: 30px;
             justify-content: space-around;
-            background: radial-gradient(circle,#66ff99,transparent);
             position: relative;
-            padding: 50px;
+            padding-bottom: 100px;
         }
        .appointment a{
-           text-decoration: none;
-           color: #fff;
-           text-shadow: 1px 1px 5px black;
+           color: #888;
        }
        .appointment a:hover{
            color: #ff3399;
@@ -468,125 +448,127 @@
         </p>
     </div>
     <!-- 新品介紹 -->
-    <section class="new-items">
-        <div class="new-item-title">
-            <h2>新品介紹</h2>
-        </div>
-        <!-- 第一品項 -->
-        <div class="new-product">
-            <div class="model">
-                <a href="product-description.html"><img src="album/flower-love.png" alt="花戀" class="model-img"></a>
-            </div>
-            <div class="describe">
-                <h3 ><a class="describe-link" href="product-description.html">花戀</a></h3>
-                <p>優雅又精緻的頭飾，<br>
-                        讓您成為最美的新娘，<br>
-                        純手工製作。</p>
-                <div class="price-btn">
-                    <div class="price">
-                        <div class="orignal">原價:<span>NT3,000</div>
-                        <div class="sale">新品優惠:NT$2,000</div>
-                    </div>
-                        <a href="#"><img src="album/pink-button.png" alt="粉紅按鈕"></a>
+        <section class="new-items-background">
+            <div class="new-items">
+                <div class="new-item-title">
+                    <h2>新品介紹</h2>
                 </div>
-            </div>
-        </div>
-            <!-- 第二品項 -->
-            <div class="second-new-product">
-                <div class="model">
-                   <a href="#"><img src="album/flower-lang.png" alt="花語" class="model-img"></a>
-                </div> 
-                <div class="second-describe">
-                    <h3><a href="#">花語</a></h3>
-                    <p>用玫瑰和金葉點綴，<br>
-                        使您有女神般的氣質。</p>
-                    <div class="second-price-btn">
-                        <div class="second-price">
-                            <div class="orignal">原價:<span>NT3,000</div>
-                            <div class="sale">新品優惠:NT$2,000</div>
+                <!-- 第一品項 -->
+                <div class="new-product">
+                    <div class="model">
+                        <a href="product-description.html"><img src="album/flower-love.png" alt="花戀" class="model-img"></a>
+                    </div>
+                    <div class="describe">
+                        <h3 ><a class="describe-link" href="product-description.html">花戀</a></h3>
+                        <p>優雅又精緻的頭飾，<br>
+                                讓您成為最美的新娘，<br>
+                                純手工製作。</p>
+                        <div class="price-btn">
+                            <div class="price">
+                                <div class="orignal">原價:<span>NT3,000</div>
+                                <div class="sale">新品優惠:NT$2,000</div>
+                            </div>
+                                <a href="#"><img src="album/pink-button.png" alt="粉紅按鈕"></a>
                         </div>
-                        <a href="#"><img src="album/pink-button.png" alt="粉紅按鈕"></a>
                     </div>
-                </div> 
-               
-            </div>
-            <!-- 第三品項 -->
-            <div class="new-product">
-                <div class="model">
-                    <a href="#"><img src="album/seduce-3.png" alt="迷惑"class="model-img"></a>
                 </div>
-                <div class="describe">
-                    <h3><a href="#" class="describe-link">迷惑</a></h3>
-                    <p>藍色系給人夢幻的感覺，<br>或許婚禮是奇幻的旅程的起點。</p>
-                    <div class="price-btn">
-                        <div class="price">
-                            <div class="orignal">原價:<span>NT3,000</div>
-                            <div class="sale">新品優惠:NT$2,000</div>
+                    <!-- 第二品項 -->
+                    <div class="second-new-product">
+                        <div class="model">
+                        <a href="#"><img src="album/flower-lang.png" alt="花語" class="model-img"></a>
                         </div>
-                        <a href="#"><img src="album/pink-button.png" alt="粉紅按鈕"></a>
+                        <div class="second-describe">
+                            <h3><a href="#">花語</a></h3>
+                            <p>用玫瑰和金葉點綴，<br>
+                                使您有女神般的氣質。</p>
+                            <div class="second-price-btn">
+                                <div class="second-price">
+                                    <div class="orignal">原價:<span>NT3,000</div>
+                                    <div class="sale">新品優惠:NT$2,000</div>
+                                </div>
+                                <a href="#"><img src="album/pink-button.png" alt="粉紅按鈕"></a>
+                            </div>
+                        </div>
+            
+                    </div>
+                    <!-- 第三品項 -->
+                    <div class="new-product">
+                        <div class="model">
+                            <a href="#"><img src="album/seduce-3.png" alt="迷惑"class="model-img"></a>
+                        </div>
+                        <div class="describe">
+                            <h3><a href="#" class="describe-link">迷惑</a></h3>
+                            <p>藍色系給人夢幻的感覺，<br>或許婚禮是奇幻的旅程的起點。</p>
+                            <div class="price-btn">
+                                <div class="price">
+                                    <div class="orignal">原價:<span>NT3,000</div>
+                                    <div class="sale">新品優惠:NT$2,000</div>
+                                </div>
+                                <a href="#"><img src="album/pink-button.png" alt="粉紅按鈕"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="more">
+                        <a href="catalogue">更多飾品</a>
                     </div>
                 </div>
-            </div>
-            <div class="more">
-                <a href="catalogue">更多飾品</a>
-            </div>  
-    </section>        
-    <!-- 客製化 -->
-    <section>
-       <div class="one-of-a-kind">
-           <div class="service">
-               <h3>客製化選擇</h3>
-                   <a href="cutomize.html">
-                     <img src="album/customize.png" alt="客製化">
-                     <p>我們也有提供客製化選擇，提供專屬於您的飾品。</p>
-                   </a> 
-           </div>
-           <div class="service">
-               <h3>門市資訊</h3>
-               <a href="store.html">
-                 <img src="album/GALA2.png" alt="門市">
-                 <p>希望現場觀看亦可預約門市</p>
-               </a>
-           </div>
-       </div>
-    </section>
+            <!-- 客製化 -->
+                <section>
+                    <div class="one-of-a-kind">
+                        <div class="service">
+                            <h3>客製化選擇</h3>
+                                <a href="cutomize.html">
+                                    <img src="album/customize.png" alt="客製化">
+                                    <p>我們也有提供客製化選擇，提供專屬於您的飾品。</p>
+                                </a> 
+                        </div>
+                        <div class="service">
+                            <h3>門市資訊</h3>
+                            <a href="store.html">
+                                <img src="album/GALA2.png" alt="門市">
+                                <p>希望現場觀看亦可預約門市</p>
+                            </a>
+                        </div>
+                    </div>
+                </section>    
+        </section>       
+    
     <!-- 品牌理念 -->
     <section class="brand-background">
-        <div class="circle"></div>
-        <div class="circle2"></div>
-        <div class="circle3"></div>
         <div class="brand">
             <div class="brand-title">
                 <h2>品牌理念</h2>
             </div>
             <div class="brand-ideas">
                     <div class="idea carefully-made">
-                        <img src="album/craving.png" alt="精雕細琢的製作">
                         <h3>精雕細琢的製作</h3>
+                        <img src="album/8-carving.png" alt="精雕細琢的製作">
                     </div>
                     <div class="idea one-and-only">
-                        <img src="album/brand-1.png" alt="獨一無二的概念">
+                        <img src="album/8-oneandonly.png" alt="獨一無二的概念">
                         <h3>獨一無二的概念</h3>
                     </div>
                     <div class="idea touching">
-                        <img src="album/touching.png" alt="觸動心弦的設計">
+                        <img src="album/8-touching.png" alt="觸動心弦的設計">
                         <h3>觸動心弦的設計</h3>
                     </div>
             </div>
         </div>
-        <div class="circle4"></div>
-        <div class="circle5"></div>
-        <div class="circle6"></div>
+        <div class="circle"></div>
+        <div class="circle1"></div>
+        <div class="circle2"></div>
     </section>
     <!-- 聯絡我們 -->
     <section class="contact-background">
-        <div class="contact-joinus-title">
-            <h2>聯絡我們</h2>
-        </div>
-        <div class="contact-us">
-            <div class="phone">連絡電話:0800-1234567</div>
-            <div class="appointment"><a href="appointment.html">立即線上預約</a></div>
-        </div>   
+        <div class="contact">
+            <div class="contact-joinus-title">
+                <h2>聯絡我們</h2>
+            </div>
+            <div class="contact-us">
+                <div class="phone">連絡電話:0800-1234567</div>
+                <div class="appointment"><a href="appointment.html">立即線上預約</a></div>
+            </div>
+        </div>  
     </section> 
     <!-- 許願池 -->
     <section class="join-us-background">
