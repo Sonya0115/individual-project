@@ -172,33 +172,51 @@
             background-position: bottom left;
         }
    </style>
+   <script type="text/javascript">
+
+    function openClosemenu(){
+      document.getElementsByClassName("side-menu")[0].classList.toggle("hidemenu")
+    }
+    function CloseInfo(){
+      document.getElementsByClassName("speaking-box")[0].classList.add("close-box")
+    }
+    function init(){
+        document.getElementsByClassName("hb")[0].onclick=openClosemenu;
+        document.getElementsByClassName("close")[0].onclick=CloseInfo;
+    }
+      window.addEventListener("load",init,false)
+  </script>
 </head>
 <body>
-    <!-- 主選單 -->
-    <header>
-        <div class="main-nav-bar">
-                <h1><a href="home.html"><img src="album/logopng.png" alt="Felix Jewelry"></a></h1>
-           <nav>
-               <ul class="main-nav-bar-links">
-                   <li class="current-page"><a href="catalogue.html">水水的飾品</a></li>
-                   <li><a href="cutomize.html">客製化</a></li>
-                   <li><a href="appointment.html">預約觀賞</a></li>
-                   <li><a href="fountain.html">折扣許願池</a></li>
-                   <li><a href="store.html">門市資訊</a></li>
-               </ul>
-           </nav>
-           <div class="search-nav-bar">
-                <div class="search">
-                    <input type="search" placeholder="尋找水水飾品";>
-                    <button><img src="album/magnifying-glass.png" alt="search"></button>
-                </div>
-                <div class="member">
-                    <a class="log-in" href="#">登入</a>
-                    <a class="sign-up"href="#">註冊</a>
-                </div>
-           </div>
+<!-- 主選單 -->
+<header class="main-nav-bar-background">
+    <nav class="main-nav-bar">
+       <h1 class="logo"><a href="home.html"><img src="album/logopng.png" alt="Felix Jewelry">
+       </a></h1>
+       <div class="side-menu">
+           <ul class="main-nav-bar-links">
+               <li><a href="catalogue.html">水水的飾品</a></li>
+               <li><a href="cutomize.html">客製化</a></li>
+               <li><a href="appointment.html">預約觀賞</a></li>
+               <li><a href="fountain.html">折扣許願池</a></li>
+               <li><a href="store.html">門市資訊</a></li>
+           </ul>
+            <div class="search">
+                <input type="search" placeholder="尋找水水飾品";>
+                <button><img src="album/magnifying-glass.png" alt="search"></button>
+            </div>
+       </div>
+        <div class="member">
+            <a class="log-in" href="#">登入</a>
+            <a class="sign-up"href="#">註冊</a>
         </div>
-    </header>
+        <button class="hb">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button> 
+   </nav>   
+</header>
        <!-- 機器人/購物車 -->
     <section>
         <div class="side-service">

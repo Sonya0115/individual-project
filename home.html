@@ -7,405 +7,431 @@
     <title>Felix Jewelry</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="header css.css">
+    <!-- <link rel="stylesheet" href="home-media.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
     <script src="//s3-ap-northeast-1.amazonaws.com/justfont-user-script/jf-63454.js"></script>
     <style>
-       .slider{
-           height: 100%;
-           top: 0;
-           position: relative;
-       }
-       .slider img{
-           width: 100%;
-           vertical-align: top;
-       }
-       .slider button{
-           width:50px;
-           height: 50px;
-           position: absolute;
-           top:0;
-           bottom: 0;
-           margin:auto;
-           border-radius: 50%;
-           border: none;
-           color:#ff3399;
-       }
-        .left-btn{
-            position: absolute;
-            top:0;
-            bottom: 0;
-            margin:auto;
-            left:0;
-            z-index: 1;
-       }
-       .right-btn{
-            position: absolute;
-            top:0;
-            bottom: 0;
-            margin:auto;
-            right:0;
-            z-index: 1;
-       }
-       .welcome{
-           position: absolute;
-           top:20%;
-           left: 17%;
-           line-height: 4.5rem;
-           text-indent: -5em;
-           font-size: 3rem;
-           color: #b8895b;
-           font-family: 'Great Vibes', cursive;
-       }
-       .welcome span{
-        padding: 6px 15px;
-       }
-       .welcome .first-line{
-           background: linear-gradient(
-               315deg, 
-               rgba(255, 255, 255, .7)22%, 
-               rgba(255, 255, 255, 0)63%);
-               border-radius: 0px 10px 0px 0px;
-       }
-       .welcome .second-line{
-        background: linear-gradient(124deg, rgba(255, 255, 255, 0)10%, rgba(255, 255, 255, 0.7)25%);
-           border-radius: 0px 10px 10px 10px;
-       }
-       /* 新品介紹 */
-       .new-items-background{
-           background-image: url(album/rm272-adj-06-e2.png);
-           background-repeat: no-repeat;
-           background-size: cover;
-           padding: 100px 0px;
-       }
-       .new-items{
-           width: 1200px;
-           margin: auto;
-       }
-       .new-item-title h2{
-          font-size: 50px;
-          /* margin: 50px; */
-          color: #cc9966;
-          text-shadow: 1px 1px 5px rgba(204, 153, 102, .3);
-       }
-       .new-product{
-           width: 1200px;
-           display: flex;
-           align-items: center;
-           justify-content: center;
-       }
-       .model{
-           width: 50%;
-       }
-       .model-img{
-          vertical-align: middle;
-          width: 100%;
-          transition: 2s;
-       }
-       .model-img:hover{
-          opacity: .5; 
-       }
-       .describe{
-        margin: 50px 0px 0px 50px;  
+    .slider{
+        height: 100%;
+        top: 0;
+        position: relative;
+    }
+    .slider img{
+        width: 100%;
+        vertical-align: top;
+    }
+    .slider button{
+        width:50px;
+        height: 50px;
+        position: absolute;
+        top:0;
+        bottom: 0;
+        margin:auto;
+        border-radius: 50%;
+        border: none;
+        color:#ff3399;
+    }
+     .left-btn{
+        position: absolute;
+        top:0;
+        bottom: 0;
+        margin:auto;
+        left:0;
+    }
+    .right-btn{
+        position: absolute;
+        top:0;
+        bottom: 0;
+        margin:auto;
+        right:0;
+    }
+    .welcome{
+        position: absolute;
+        top:20%;
+        left: 17%;
+        line-height: 75px;
+        text-indent: -5em;
+        font-size: 50px;
+        color: #b8895b;
+        font-family: 'Great Vibes', cursive;
+    }
+    .welcome span{
+     padding: 6px 15px;
+    }
+    .welcome .first-line{
+        background: linear-gradient(
+            315deg, 
+            rgba(255, 255, 255, .7)22%, 
+            rgba(255, 255, 255, 0)63%);
+            border-radius: 0px 10px 0px 0px;
+    }
+    .welcome .second-line{
+     background: linear-gradient(124deg, rgba(255, 255, 255, 0)10%, rgba(255, 255, 255, 0.7)25%);
+        border-radius: 0px 10px 10px 10px;
+    }
+    /* 新品介紹 */
+    .new-items-background{
+        background-image: url(album/rm272-adj-06-e2.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 100px 0px;
+    }
+    .new-items{
+        width: 1200px;
+        margin: auto;
+    }
+    .new-item-title h2{
+       font-size: 50px;
+       /* margin: 50px; */
+       color: #cc9966;
+       text-shadow: 1px 1px 5px rgba(204, 153, 102, .3);
+    }
+    .new-product{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .model{
         width: 50%;
-       }
-       .describe h3{
-           font-size: 45px;
-       }
-       .describe>p{
-           font-size: 20px;
-           margin:30px 5px; 
-           color:#888;
-       }
-       .describe-link{
-        text-decoration: none;
-        color: black;   
-       }
-       .describe-link:hover .model-img{
-          opacity: .5;
-       }
-       .second-new-product{
-           display: flex;
-           flex-direction: row-reverse;
-       }
-       .second-describe{
-           display: flex;
-           flex-direction: column;
-           align-items: flex-end;
-       } 
-       .second-describe{
-        margin: 100px 50px 0px 0px;  
-        width: 50%;
-       }
-       .second-describe h3{
-           font-size: 45px;
-           margin-right: 20px;
-       }
-       .second-describe>p{
-           font-size: 20px;
-           margin:30px 5px; 
-           text-align: end;
-           color:#aaa;
-       }
-       .second-describe h3 a{
-        text-decoration: none;
-        color: black;   
-       }
-       .second-price-btn{
-           display: flex;
-           align-items: center;
-           position: relative;
-       }
-       .second-price{
-           text-align: end;
-       }
-       .second-price-btn a{
-           position: relative;
-           right: -40px;
-       }
-       .second-price-btn a img{
-           width: 100%;
-           display: inline-block;
-           
-       }
-       .second-price .orignal{
-           font-size: 20px;
-       }
-       .second-price .orignal>span{
-           text-decoration: line-through;
-       }
-       .second-price .sale{
-           font-size: 25px;
-           color:red;
-           margin: 20px 0px 30px 0px;
-       }
-       .more{
-           text-align: end;
-       }
-       .more a{
-           font-size: 28px;
-           color: #888;
-           text-underline-offset: 5px;
-       }
-       .more a:hover{
-           color:#ff3399
-       }
-       /* 客製化 */
-       .one-of-a-kind{
-           display: flex;
-           justify-content: space-evenly;
-           margin-top: 100px;
-       }
-       .service{
-           width: 40%;
-           /* height:400px; */
-           overflow: hidden;
-       }
-       .service img{
-           width: 100%;
-           vertical-align: top;
-           transform:scale(1 , 1);
-           transition: 2s;
-           overflow: hidden;
-       }
-       .one-of-a-kind h3{
-           font-size: 30px;
-           margin-bottom: 50px;
-           text-align: center;
-           font-weight: bold;
-       }
-       .one-of-a-kind p{
-           font-size: 20px;
-           padding:15px;
-           text-align: center;
-           color: #fff;
-           background: linear-gradient(
-            120deg, 
-            #ff0066 0%, 
-            #ff33cc 100%);
-            transition: transform 1s;
-            position: relative;
-       }
-       .one-of-a-kind a{
-           text-decoration: none; 
-       }
-       .service img:hover{
-        transform:scale(1.2 , 1.2);
-       }
-        /* 品牌理念 */
-        .brand-background{
-            background-color: rgba(105, 214, 160, 0.3);
-            padding: 50px 0px;
-            /* margin-top: 300px; */
-            position: relative;
-            z-index: 1;
-        }
-        .circle{
-            width: 170px;
-            height: 90px;
-            position: absolute;
-            bottom:-12%;
-            left: 11%;
-            background: #d2f3e2;
-            border-radius:  0 0 100px 100px;
-            
-        }
-        .circle1{
-            width: 170px;
-            height: 98px;
-            position: absolute;
-            bottom:0;
-            left: 45%;
-            background: #ffffbb;
-            border-radius:100px 100px 0 0 ;
-            
-        }
-        .circle2{
-            width: 170px;
-            height: 90px;
-            position: absolute;
-            bottom:-12%;
-            right: 11%;
-            background:  #d2f3e2;
-            border-radius: 0 0 100px 100px;
-            
-        }
-        .brand{
-            width: 1200px;
-            margin: auto;
-        }
-        .brand-title{
-            margin-bottom: 50px;
-        }
-        .brand-title h2{
-           font-size: 50px;
-           color: #cc9966;
-        }
-        .brand-ideas{
-            text-align: center;
-            height: 500px;
-            margin-top: 100px;
-        }
-        .idea{
-            width:33.333333%;
-            margin: auto;
-        }
-        .idea h3{
-            font-size: 25px;
-            padding:10px;
-            text-align: center;
-            color: black;
-            margin: auto;
-        }
-        .idea img{
-            width: 70%;
-            vertical-align: top;
-        }
-        .carefully-made{
-            position: relative;
-            top:-10%;
-        }
-        .one-and-only{
-            position: relative;
-            top: -35%;
-            left:-18%;
-        }
-        .touching{
-            position: relative;
-            top: -93%;
-            left:18%;
-        }
-        /* 聯絡我們 */
-        .contact-background{
-            background: linear-gradient(180deg, rgba(255, 251, 6, 0.3)60%, rgba(255, 255, 255, 0)100%);
-            padding:100px 0px 200px 0px;
-        }
-        .contact{
-            width: 1200px;
-            margin: auto;
-        }
-        .phone{
-            text-align: center;
-            line-height: 1.5em;
-        }
-        .or{
-            font-size:60px;
-            font-family: 'Great Vibes', cursive;
-        }
-        .contact-joinus-title{
-            margin-bottom: 100px;
-        }
-        .contact-joinus-title h2{
-           margin-top: 100px;
-           font-size: 50px;
-           color: #cc9966;
-        }
-        .contact-us{
-            display: flex;
-            align-items: center;
-            font-size: 30px;
-            justify-content: space-around;
-            position: relative;
-            padding-bottom: 100px;
-        }
-       .appointment a{
-           color: #888;
-       }
-       .appointment a:hover{
-           color: #ff3399;
-       }
-       /* 許願池 */
-       .join-us-background{
-        font-size: 2rem;
-        margin-top: -200px;
-       }
-       .collection{
-           width: 1200px;
-           margin: auto;
-           display: flex;
-           align-items: center;
-           position: relative;
-       }
-       .excited{
-           color: #fff;
-           text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-           font-style: italic;
-           position: relative;
-           top:20px;
-       }
-       .earn-coin{
-           display: flex;
-           justify-content: center;
-           width:70%
-       }
-       .earn-coin .sign-up{
-           font-size: 1.5rem;
-           margin-left: 10%;
-           height:25px;
-           
-        }
-        .fountain{
-           color: #888;
-       }
-       .fountain:hover{
-           color: #ff3399;
-       }
-       .title-model{
-           width:30%
-       }
-       .title-model img{
-           width: 100%;
-           border-radius: 0px 50px 0px 50px;
-       }
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+    }
+    .model-img{
+       vertical-align: middle;
+       width: 100%;
+       transition: 2s;
+    }
+    .describe{
+       margin: 50px 0px 0px 50px;  
+       width: 50%;
+    }
+    .describe-link h3{
+        font-size: 45px;
+    }
+    .describe>p{
+        font-size: 20px;
+        margin:30px 5px; 
+        color:#888;
+    }
+    .describe-link{
+      text-decoration: none;
+      color: black;
+    }
+    .describe-link:hover{
+        color: #ff3399;
+    }
+    .model-img:hover{
+       opacity: .5; 
+    }
+    .second-new-product{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .second-describe{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    } 
+    .second-describe{
+       margin: 170px 40px 0px 0px;  
+       width: 50%;
+    }
+    .second-describe h3{
+        font-size: 45px;
+    }
+    .second-describe>p{
+        font-size: 20px;
+        margin:30px 5px; 
+        text-align: end;
+        color:#aaa;
+    }
+    .second-describe h3 a{
+     text-decoration: none;
+     color: black;   
+    }
+    .second-price-btn{
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin-right: 10%;
+    }
+    .second-price{
+        text-align: end;
+    }
+    .second-price-btn a{
+        position: relative;
+        right: -40px;
+    }
+    .second-price-btn a img{
+        width: 100%;
+        display: inline-block;   
+    }
+    .second-price .original{
+        font-size: 20px;
+    }
+    .second-price .original>span{
+        text-decoration: line-through;
+    }
+    .second-price .sale{
+        font-size: 25px;
+        color:red;
+        font-weight: bold;
+        margin: 20px 0px 30px 0px;
+    }
+    .second h3{
+        left:-25%;
+    }
+    .more{
+        text-align: end;
+    }
+    .more a{
+        font-size: 28px;
+        color: #888;
+        text-underline-offset: 5px;
+    }
+    .more a:hover{
+        color:#ff3399
+    }
+    /* 客製化 */
+    .one-of-a-kind{
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 100px;
+    }
+    .service{
+        width: 40%;
+        /* height:400px; */
+        overflow: hidden;
+    }
+    .service img{
+        width: 100%;
+        vertical-align: top;
+        transform:scale(1 , 1);
+        transition: 2s;
+        overflow: hidden;
+    }
+    .one-of-a-kind h3{
+        font-size: 30px;
+        margin-bottom: 50px;
+        text-align: center;
+        font-weight: bold;
+    }
+    .one-of-a-kind p{
+        font-size: 20px;
+        padding:15px;
+        text-align: center;
+        color: #fff;
+        background: linear-gradient(
+         120deg, 
+         #ff0066 0%, 
+         #ff33cc 100%);
+         transition: transform 1s;
+         position: relative;
+    }
+    .one-of-a-kind a{
+        text-decoration: none; 
+    }
+    .service img:hover{
+     transform:scale(1.2 , 1.2);
+    }
+     /* 品牌理念 */
+     .brand-background{
+        background-color: rgb(239,235,234);
+        padding: 50px 0px;
+        position: relative;
+        z-index: 1;
+     }
+     .circle{
+        width: 170px;
+        height: 90px;
+        position: absolute;
+        bottom:-12%;
+        left: 11%;
+        background: rgb(239,235,234);
+        border-radius:  0 0 100px 100px;
+         
+     }
+     .circle1{
+        width: 170px;
+        height: 98px;
+        position: absolute;
+        bottom:0;
+        left: 45%;
+        background: rgb(247,244,237);
+        border-radius:100px 100px 0 0 ;
+         
+     }
+     .circle2{
+        width: 170px;
+        height: 90px;
+        position: absolute;
+        bottom:-12%;
+        right: 11%;
+        background:  rgb(239,235,234);
+        border-radius: 0 0 100px 100px;
+         
+     }
+     .brand{
+        width: 1200px;
+        margin: auto;
+     }
+     .brand-title{
+        margin-bottom: 50px;
+     }
+     .brand-title h2{
+        font-size: 50px;
+        color: #cc9966;
+     }
+     .brand-ideas{
+        text-align: center;
+        height: 500px;
+        margin-top: 100px;
+     }
+     .idea{
+        width:33.333333%;
+        margin: auto;
+     }
+     .idea h3{
+        font-size: 25px;
+        padding:10px;
+        text-align: center;
+        color: black;
+        margin: auto;
+     }
+     .idea img{
+        width: 70%;
+        vertical-align: top;
+     }
+     .carefully-made{
+        position: relative;
+        top:-10%;
+     }
+     .one-and-only{
+        position: relative;
+        top: -35%;
+        left:-18%;
+     }
+     .touching{
+        position: relative;
+        top: -93%;
+        left:18%;
+     }
+     /* 聯絡我們 */
+     .contact-background{
+        background: linear-gradient(180deg, rgb(247,244,237)60%, rgba(255, 255, 255, 0)100%);
+        padding:100px 0px 200px 0px;
+     }
+     .contact{
+        width: 1200px;
+        margin: auto;
+     }
+     .phone{
+        text-align: center;
+        line-height: 1.5em;
+     }
+     .or{
+        font-size:60px;
+        font-family: 'Great Vibes', cursive;
+     }
+     .contact-joinus-title{
+        margin-bottom: 100px;
+     }
+     .contact-joinus-title h2{
+        margin-top: 100px;
+        font-size: 50px;
+        color: #cc9966;
+     }
+     .contact-us{
+        display: flex;
+        align-items: center;
+        font-size: 30px;
+        justify-content: space-around;
+        position: relative;
+        padding-bottom: 100px;
+     }
+    .appointment a{
+        color: #888;
+    }
+    .appointment a:hover{
+        color: #ff3399;
+    }
+    /* 許願池 */
+    .join-us-background{
+       font-size: 2rem;
+       margin-top: -100px;
+    }
+    .collection{
+        width: 1200px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+    .excited{
+        color: #fff;
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+        font-style: italic;
+        position: relative;
+        top:20px;
+    }
+    .earn-coin{
+        display: flex;
+        justify-content: center;
+        width:70%;
+        padding: 30px 0px 300px 0px;
+        background-color: rgba(205,133,63,.2);
+        border-radius: 10px;
+    }
+    .earn-coin p{
+        color: #fff;
+        text-shadow: 1px 1px 5px rgba(0, 0, 0, .3);
+    }
+    .earn-coin .sign-up{
+        font-size: 1.5rem;
+        margin-left: 10%;
+        height:25px;
+     }
+     .fountain{
+        color: #888;
+    }
+    .fountain:hover{
+        color: #ff3399;
+    }
+    .title-model{
+        width:30%;
+        margin: -15% -10% 0 0;
+        z-index: 1;
+    }
+    .title-model img{
+        width: 100%;
+        border-radius: 0px 50px 0px 50px;
+    } 
+   
     </style>
+    <script type="text/javascript">
+
+      function openClosemenu(){
+        document.getElementsByClassName("side-menu")[0].classList.toggle("hidemenu")
+      }
+      function CloseInfo(){
+        document.getElementsByClassName("speaking-box")[0].classList.add("close-box")
+      }
+      function init(){
+          document.getElementsByClassName("hb")[0].onclick=openClosemenu;
+          document.getElementsByClassName("close")[0].onclick=CloseInfo;
+      }
+        window.addEventListener("load",init,false)
+    </script>
 </head>
 <body>
-    <!-- 主選單 -->
-    <header>
-        <div class="main-nav-bar">
-                <h1><a href="home.html"><img src="album/logopng.png" alt="Felix Jewelry"></a></h1>
-           <nav>
+<!-- 主選單 -->
+<header class="main-nav-bar-background">
+        <nav class="main-nav-bar">
+           <h1 class="logo"><a href="home.html"><img src="album/logopng.png" alt="Felix Jewelry"></a></h1>
+           <div class="side-menu">
                <ul class="main-nav-bar-links">
                    <li><a href="catalogue.html">水水的飾品</a></li>
                    <li><a href="cutomize.html">客製化</a></li>
@@ -413,132 +439,145 @@
                    <li><a href="fountain.html">折扣許願池</a></li>
                    <li><a href="store.html">門市資訊</a></li>
                </ul>
-           </nav>
-           <div class="search-nav-bar">
                 <div class="search">
                     <input type="search" placeholder="尋找水水飾品";>
                     <button><img src="album/magnifying-glass.png" alt="search"></button>
                 </div>
-                <div class="member">
-                    <a class="log-in" href="#">登入</a>
-                    <a class="sign-up"href="#">註冊</a>
-                </div>
            </div>
-        </div>
-    </header>
-    <!-- 機器人/購物車 -->
-    <section>
+            <div class="member">
+                <a class="log-in" href="#">登入</a>
+                <a class="sign-up"href="#">註冊</a>
+            </div>
+            <button class="hb">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button> 
+       </nav>   
+</header>
+<!-- 機器人/購物車 -->
+<section>
         <div class="side-service">
             <div class="speaking-box">
                 <p>
                     歡迎來到 <span>Felix Jewelry</span>,<br>
                     可以如何幫助您呢?
-                 </p>
-                 <div class="white-triangle"></div>
-                 <button class="close">X</button>
+                </p>
+                <div class="white-triangle"></div>
+                <button class="close">X</button>
             </div>
              <button><img src="album/bot.png" alt="service"></button>
              <a href="fountain.html"><img src="album/gold-pot.png" alt="service"></a>
              <a href="#"><img src="album/shopping-cart.png" alt="shopping-cart"></a>
         </div>
-    </section>
-    <!-- 幻燈片 -->
-    <div class="slider">
+</section>
+<!-- 幻燈片 -->
+<div class="slider">
         <img src="album/nizuc-cancun-wedding.jpg" alt="Happy Wedding">
         <button class="left-btn">◀</button>
         <button class="right-btn">▶</button>
         <p class="welcome"><span class="first-line">Welcome to Felix Jewelry</span><br>
            <span class="second-line">Where fantasies come true</span>
         </p>
-    </div>
-    <!-- 新品介紹 -->
-        <section class="new-items-background">
-            <div class="new-items">
-                <div class="new-item-title">
-                    <h2>新品介紹</h2>
-                </div>
-                <!-- 第一品項 -->
-                <div class="new-product">
-                    <div class="model">
-                        <a href="product-description.html"><img src="album/flower-love.png" alt="花戀" class="model-img"></a>
+</div>
+<!-- 新品介紹 -->
+<section class="new-items-background">
+    <div class="new-items">
+        <div class="new-item-title">
+            <h2>新品登場</h2>
+        </div>
+        <!-- 第一品項 -->
+        <div class="new-product">
+            <div class="model">
+                <a href="product-description.html">
+                    <img src="album/flower-love.png" alt="花戀" class="model-img">
+                </a>  
+            </div>
+            <div class="describe">
+                <a class="describe-link" href="product-description.html"><h3>花戀</h3></a>
+                <p>
+                    優雅又精緻的頭飾，<br>
+                    讓您成為最美的新娘，<br>
+                    純手工製作。
+                </p>
+                <div class="price-btn">
+                    <div class="price">
+                        <div class="original">原價:<span>NT3,000</div>
+                        <div class="sale">新品優惠:NT$2,000</div>
                     </div>
-                    <div class="describe">
-                        <h3 ><a class="describe-link" href="product-description.html">花戀</a></h3>
-                        <p>優雅又精緻的頭飾，<br>
-                                讓您成為最美的新娘，<br>
-                                純手工製作。</p>
-                        <div class="price-btn">
-                            <div class="price">
-                                <div class="orignal">原價:<span>NT3,000</div>
-                                <div class="sale">新品優惠:NT$2,000</div>
-                            </div>
-                                <a href="#"><img src="album/pink-button.png" alt="粉紅按鈕"></a>
+                        <a href="#"><img src="album/pink-button.png" alt="粉紅按鈕"></a>
+                </div>   
+            </div>
+        </div>
+            <!-- 第二品項 -->
+            <div class="second-new-product">
+                <div class="model">
+                <a href="#">
+                    <img src="album/flower-lang.png" alt="花語" class="model-img">
+                </a>
+                </div> 
+                <div class="second-describe">
+                    <a class="describe-link second" href="#"><h3>花語</h3></a>
+                    <p>
+                        用玫瑰和金葉點綴，<br>
+                        使您有女神般的氣質。
+                    </p>
+                    <div class="second-price-btn">
+                        <div class="second-price">
+                            <div class="original">原價:<span>NT3,000</div>
+                            <div class="sale">新品優惠:NT$2,000</div>
                         </div>
-                    </div>
-                </div>
-                    <!-- 第二品項 -->
-                    <div class="second-new-product">
-                        <div class="model">
-                        <a href="#"><img src="album/flower-lang.png" alt="花語" class="model-img"></a>
-                        </div>
-                        <div class="second-describe">
-                            <h3><a href="#">花語</a></h3>
-                            <p>用玫瑰和金葉點綴，<br>
-                                使您有女神般的氣質。</p>
-                            <div class="second-price-btn">
-                                <div class="second-price">
-                                    <div class="orignal">原價:<span>NT3,000</div>
-                                    <div class="sale">新品優惠:NT$2,000</div>
-                                </div>
-                                <a href="#"><img src="album/pink-button.png" alt="粉紅按鈕"></a>
-                            </div>
-                        </div>
-            
-                    </div>
-                    <!-- 第三品項 -->
-                    <div class="new-product">
-                        <div class="model">
-                            <a href="#"><img src="album/seduce-3.png" alt="迷惑"class="model-img"></a>
-                        </div>
-                        <div class="describe">
-                            <h3><a href="#" class="describe-link">迷惑</a></h3>
-                            <p>藍色系給人夢幻的感覺，<br>或許婚禮是奇幻的旅程的起點。</p>
-                            <div class="price-btn">
-                                <div class="price">
-                                    <div class="orignal">原價:<span>NT3,000</div>
-                                    <div class="sale">新品優惠:NT$2,000</div>
-                                </div>
-                                <a href="#"><img src="album/pink-button.png" alt="粉紅按鈕"></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="more">
-                        <a href="catalogue">更多飾品</a>
+                        <a href="#"><img src="album/pink-button.png" alt="粉紅按鈕"></a>
                     </div>
                 </div>
-            <!-- 客製化 -->
-                <section>
-                    <div class="one-of-a-kind">
-                        <div class="service">
-                            <h3>客製化選擇</h3>
-                                <a href="cutomize.html">
-                                    <img src="album/customize.png" alt="客製化">
-                                    <p>我們也有提供客製化選擇，提供專屬於您的飾品。</p>
-                                </a> 
-                        </div>
-                        <div class="service">
-                            <h3>門市資訊</h3>
-                            <a href="store.html">
-                                <img src="album/GALA2.png" alt="門市">
-                                <p>希望現場觀看亦可預約門市</p>
-                            </a>
-                        </div>
-                    </div>
-                </section>    
-        </section>       
     
-    <!-- 品牌理念 -->
-    <section class="brand-background">
+            </div>
+            <!-- 第三品項 -->
+            <div class="new-product">
+                <div class="model">
+                    <a href="#" class="describe-link">
+                        <img src="album/seduce-3.png" alt="迷惑"class="model-img">
+                    </a>
+                </div>
+                <div class="describe">
+                    <a href="#" class="describe-link"><h3>迷惑</h3></a>
+                    <p>
+                        藍色系給人夢幻的感覺，<br>
+                        或許婚禮是奇幻的旅程的起點。
+                    </p>
+                    <div class="price-btn">
+                        <div class="price">
+                            <div class="original">原價:<span>NT3,000</div>
+                            <div class="sale">新品優惠:NT$2,000</div>
+                        </div>
+                        <a href="#"><img src="album/pink-button.png" alt="粉紅按鈕"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="more">
+                <a href="catalogue">更多飾品</a>
+            </div>
+    </div>
+    <!-- 客製化 -->
+    <div class="one-of-a-kind">
+        <div class="service">
+            <h3>客製化選擇</h3>
+                <a href="cutomize.html">
+                    <img src="album/customize.png" alt="客製化">
+                    <p>我們也有提供客製化選擇，提供專屬於您的飾品。</p>
+                </a> 
+        </div>
+        <div class="service">
+            <h3>立即預約</h3>
+            <a href="appointment.html">
+                <img src="album/GALA2.png" alt="門市">
+                <p>希望現場觀看亦可預約門市</p>
+            </a>
+        </div>
+    </div> 
+</section>       
+<!-- 品牌理念 -->
+<section class="brand-background">
         <div class="brand">
             <div class="brand-title">
                 <h2>品牌理念</h2>
@@ -561,9 +600,9 @@
         <div class="circle"></div>
         <div class="circle1"></div>
         <div class="circle2"></div>
-    </section>
-    <!-- 聯絡我們 -->
-    <section class="contact-background">
+</section>
+<!-- 聯絡我們 -->
+<section class="contact-background">
         <div class="contact">
             <div class="contact-joinus-title">
                 <h2>聯絡我們</h2>
@@ -574,12 +613,12 @@
                         客服連絡電話:0800-1234567</p>
                 </div>
                 <div class="or">or</div>
-                <div class="appointment"><a href="appointment.html">立即線上預約</a></div>
+                <div class="appointment"><a href="store.html">門市查詢</a></div>
             </div>
         </div>  
-    </section> 
-    <!-- 許願池 -->        
-    <section class="join-us-background">
+</section> 
+<!-- 許願池 -->        
+<section class="join-us-background">
       <div class="collection">
             <div class="title-model">
                 <p class="excited">心動了嗎?</p>
@@ -590,10 +629,9 @@
                 <a class="sign-up"href="#">註冊</a>
             </div> 
         </div>    
-    </section>      
-    <!-- footer -->
-    
-    <footer>
+</section>      
+<!-- footer --> 
+<footer>
         <nav>
             <ul class="footer-links">
                 <li><a href="catalogue.html">水水的飾品</a></li>
@@ -616,6 +654,6 @@
         <div class="copy-right">
             &copy;Felix Jewelry. 2021. all rights reserved!
         </div>
-    </footer>
+</footer>
 </body>
 </html>
