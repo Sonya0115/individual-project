@@ -62,17 +62,6 @@
             width: 33.333333%;
             cursor: pointer;
         }
-        .other-pics :nth-child(2){
-            box-shadow: 1px 1px 10px black;
-        }
-        .other-pics button{
-            height:50px;
-            border: none;
-            background-color: #fff;
-            color: #ff3399;
-            font-size: 25px;
-            cursor: pointer;
-        }
         .description h2{
             font-size: 50px;
             font-weight: bold;
@@ -123,18 +112,12 @@
             border-bottom: 5px solid black;
             margin: 100px 0px;
         }
-        .selection button{
-            font-size: 30px;
-            width: 40px;
-            height: 40px;
-            color: #ff3399;
-            background-color: #fff;
-            border: none;
-
-        }
         .choose{
+            display: inline-block;
             width:20%;
             text-align: center;
+            color: #ff3399;
+            text-decoration: none; 
         }
         .choose img{
             width:200px;
@@ -275,10 +258,40 @@
         function CloseInfo(){
           document.getElementsByClassName("speaking-box")[0].classList.add("close-box")
         }
+
+        // function showLarge(e){
+        //   let small=e.target;
+        //   document.getElementById("large-pic").src=small.src.replace("-small","");
+        //   small.style.boxShadow="5px 5px 10px rgba(0,0,0,.3)"
+          
+        //   for(j=0;j<smalls.length;j++){
+				
+		// 		if(j!=i){
+		// 			smalls[j].style.boxShadow="";	
+		// 		};
+		// 	}	 
+        // }
         function init(){
+            // 關閉選單
             document.getElementsByClassName("hb")[0].onclick=openClosemenu;
+            //關閉機器人對話
             document.getElementsByClassName("close")[0].onclick=CloseInfo;
-        }
+            //小圖變大圖
+            let smalls = document.querySelectorAll(".other-pics img");
+	        for(let i=0;i<smalls.length;i++){
+		      smalls[i].onclick=function(e){
+			  let small=e.target;
+              document.getElementById("large-pic").src=small.src.replace("-small","");
+			  small.style.boxShadow="5px 5px 10px rgba(0,0,0,.6)";
+			 for(j=0;j<smalls.length;j++){
+				
+				if(j!=i){
+					smalls[j].style.boxShadow="";	
+				};
+			}	
+		};
+	}
+	}
           window.addEventListener("load",init,false)
       </script>
 </head>
@@ -339,14 +352,12 @@
         <div class="product">
             <div class="model">
                 <div class="main-pic">
-                    <img src="album/flower-love-full.png" alt="花戀">
+                    <img  id="large-pic"src="album/product-des/flower-love.png" alt="花戀">
                 </div>
                 <div class="other-pics">
-                    <button>◀</button>
-                    <img src="album/flower-love-full.png" alt="花戀">
-                    <img src="album/small-pic-2.png" alt="花戀造型二">
-                    <img src="album/small-pic-3.png" alt="花戀造型三">
-                    <button>▶</button>
+                    <img src="album/product-des/flower-love-small.png" alt="花戀">
+                    <img src="album/product-des/flower-love-2-small.png" alt="花戀造型二">
+                    <img src="album/product-des/flower-love-3-small.png" alt="花戀造型三">
                 </div>
             </div>
             <div class="description">
@@ -368,7 +379,7 @@
         </div>
         <!-- 上一個品項/下一個品項 -->
         <div class="selection">
-            <button class="choose">◀</button>
+            <a href="#" class="choose">◀</a href="#">
            <div class="choose last"> 
                 <a href="#">
                   <img src="album/flower-lang-noback2.png" alt="花語">
@@ -389,7 +400,7 @@
                   <div>迷惑</div>
                </a>
             </div>
-            <button class="choose">▶</button>
+            <a href="#" class="choose">▶</a href="#">
         </div>
     </section>
     <!-- 售後服務 -->

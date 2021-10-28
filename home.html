@@ -7,10 +7,11 @@
     <title>Felix Jewelry</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="header css.css">
-    <!-- <link rel="stylesheet" href="home-media.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="owl/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="owl/assets/owl.theme.default.min.css">
     <script src="//s3-ap-northeast-1.amazonaws.com/justfont-user-script/jf-63454.js"></script>
     <style>
     .slider{
@@ -74,30 +75,18 @@
     /* 新品介紹 */
     .new-items-background{
         background-image: url(album/rm272-adj-06-e2.png);
-        background-repeat: no-repeat;
         background-size: cover;
+        background-repeat: no-repeat;
         padding: 100px 0px;
     }
     .new-items{
-        width: 1200px;
+        max-width: 1200px;
         margin: auto;
     }
     .new-item-title h2{
        font-size: 50px;
-       /* margin: 50px; */
        color: #cc9966;
        text-shadow: 1px 1px 5px rgba(204, 153, 102, .3);
-    }
-    .new-product{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .model{
-        width: 50%;
-        display: flex;
-        align-items: flex-end;
-        position: relative;
     }
     .model-img{
        vertical-align: middle;
@@ -120,32 +109,12 @@
       text-decoration: none;
       color: black;
     }
-    .describe-link:hover{
-        color: #ff3399;
-    }
-    .model-img:hover{
-       opacity: .5; 
-    }
-    .second-new-product{
-        display: flex;
-        flex-direction: row-reverse;
-    }
-    .second-describe{
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-    } 
-    .second-describe{
-       margin: 170px 40px 0px 0px;  
-       width: 50%;
-    }
     .second-describe h3{
         font-size: 45px;
     }
     .second-describe>p{
         font-size: 20px;
         margin:30px 5px; 
-        text-align: end;
         color:#aaa;
     }
     .second-describe h3 a{
@@ -157,9 +126,6 @@
         align-items: center;
         position: relative;
         margin-right: 10%;
-    }
-    .second-price{
-        text-align: end;
     }
     .second-price-btn a{
         position: relative;
@@ -179,49 +145,29 @@
         font-size: 25px;
         color:red;
         font-weight: bold;
-        margin: 20px 0px 30px 0px;
     }
     .second h3{
         left:-25%;
-    }
-    .more{
-        text-align: end;
     }
     .more a{
         font-size: 28px;
         color: #888;
         text-underline-offset: 5px;
     }
-    .more a:hover{
-        color:#ff3399
-    }
     /* 客製化 */
-    .one-of-a-kind{
-        display: flex;
-        justify-content: space-evenly;
-        margin-top: 100px;
-    }
-    .service{
-        width: 40%;
-        /* height:400px; */
-        overflow: hidden;
-    }
     .service img{
         width: 100%;
         vertical-align: top;
         transform:scale(1 , 1);
         transition: 2s;
-        overflow: hidden;
     }
     .one-of-a-kind h3{
         font-size: 30px;
-        margin-bottom: 50px;
         text-align: center;
-        font-weight: bold;
     }
     .one-of-a-kind p{
         font-size: 20px;
-        padding:15px;
+        padding:10px;
         text-align: center;
         color: #fff;
         background: linear-gradient(
@@ -234,156 +180,56 @@
     .one-of-a-kind a{
         text-decoration: none; 
     }
-    .service img:hover{
-     transform:scale(1.2 , 1.2);
-    }
      /* 品牌理念 */
-     .brand-background{
+    .brand-background{
         background-color: rgb(239,235,234);
         padding: 50px 0px;
         position: relative;
         z-index: 1;
-     }
-     .circle{
-        width: 170px;
-        height: 90px;
-        position: absolute;
-        bottom:-12%;
-        left: 11%;
-        background: rgb(239,235,234);
-        border-radius:  0 0 100px 100px;
-         
-     }
-     .circle1{
-        width: 170px;
-        height: 98px;
-        position: absolute;
-        bottom:0;
-        left: 45%;
-        background: rgb(247,244,237);
-        border-radius:100px 100px 0 0 ;
-         
-     }
-     .circle2{
-        width: 170px;
-        height: 90px;
-        position: absolute;
-        bottom:-12%;
-        right: 11%;
-        background:  rgb(239,235,234);
-        border-radius: 0 0 100px 100px;
-         
-     }
-     .brand{
-        width: 1200px;
-        margin: auto;
-     }
-     .brand-title{
+    }
+    .brand-title{
         margin-bottom: 50px;
-     }
-     .brand-title h2{
+    }
+    .brand-title h2{
         font-size: 50px;
         color: #cc9966;
-     }
-     .brand-ideas{
-        text-align: center;
-        height: 500px;
-        margin-top: 100px;
-     }
-     .idea{
-        width:33.333333%;
-        margin: auto;
-     }
-     .idea h3{
+    }
+    .idea h3{
         font-size: 25px;
         padding:10px;
         text-align: center;
         color: black;
         margin: auto;
-     }
-     .idea img{
-        width: 70%;
-        vertical-align: top;
-     }
-     .carefully-made{
-        position: relative;
-        top:-10%;
-     }
-     .one-and-only{
-        position: relative;
-        top: -35%;
-        left:-18%;
-     }
-     .touching{
-        position: relative;
-        top: -93%;
-        left:18%;
-     }
-     /* 聯絡我們 */
-     .contact-background{
-        background: linear-gradient(180deg, rgb(247,244,237)60%, rgba(255, 255, 255, 0)100%);
-        padding:100px 0px 200px 0px;
-     }
-     .contact{
-        width: 1200px;
-        margin: auto;
-     }
-     .phone{
+    }
+    /* 聯絡我們 */
+    .phone{
         text-align: center;
         line-height: 1.5em;
-     }
-     .or{
-        font-size:60px;
-        font-family: 'Great Vibes', cursive;
-     }
-     .contact-joinus-title{
+    }
+    .contact-joinus-title{
         margin-bottom: 100px;
-     }
-     .contact-joinus-title h2{
-        margin-top: 100px;
+    }
+    .contact-joinus-title h2{
         font-size: 50px;
         color: #cc9966;
-     }
-     .contact-us{
-        display: flex;
-        align-items: center;
-        font-size: 30px;
-        justify-content: space-around;
-        position: relative;
-        padding-bottom: 100px;
-     }
+    }
+    .contact-us{
+       font-size: 30px;
+    }
+    .or{
+        font-size: 60px;
+        font-family: 'Great Vibes', cursive;
+    }
     .appointment a{
         color: #888;
-    }
-    .appointment a:hover{
-        color: #ff3399;
     }
     /* 許願池 */
     .join-us-background{
        font-size: 2rem;
-       margin-top: -100px;
-    }
-    .collection{
-        width: 1200px;
-        margin: auto;
-        display: flex;
-        align-items: center;
-        position: relative;
-    }
-    .excited{
-        color: #fff;
-        text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-        font-style: italic;
-        position: relative;
-        top:20px;
     }
     .earn-coin{
-        display: flex;
-        justify-content: center;
-        width:70%;
-        padding: 30px 0px 300px 0px;
-        background-color: rgba(205,133,63,.2);
-        border-radius: 10px;
+      background-color: rgba(205,133,63,.2);
+      border-radius: 10px;
     }
     .earn-coin p{
         color: #fff;
@@ -391,25 +237,429 @@
     }
     .earn-coin .sign-up{
         font-size: 1.5rem;
-        margin-left: 10%;
         height:25px;
-     }
-     .fountain{
+    }
+    .fountain{
         color: #888;
     }
-    .fountain:hover{
+    @media screen and (max-width:768px){
+     /* KV */
+      .welcome{
+         display:none
+       }  
+      /* 新品介紹 */
+       .new-items{
+         width:100%;
+       } 
+       .new-item-title h2{
+         text-align: center;
+        }
+        .new-product{
+         flex-wrap: wrap;
+         margin: 20px 0px;
+        }
+        .describe{
+         width:100%;
+         text-align: center;
+         margin-left: auto;
+        }
+        .model{
+         width: 100%; 
+        }
+        .model img {
+         width: 100%;
+        }
+        .price-btn{
+          justify-content: center;
+        }
+        .second-describe h3{
+          text-align: center;
+        }
+        .second-describe>p{
+         text-align: center;
+        }
+        .second-price-btn{
+         justify-content: center;
+        }
+        .more{
+         margin: 50px 0;
+         text-align: center;
+        }
+        /* 客製化 */
+        .service{
+         width: 100%;
+         margin:100px 0;
+        }
+        /* 品牌理念 */
+        .brand-title h2{
+            text-align: center;
+        }
+        .idea{
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            margin: 20px 0;
+        }
+        .carefully-made{
+            flex-direction: row-reverse;
+        }
+        /* 聯絡我們 */
+        .contact-background{
+            background-color: rgb(247,244,237);
+            padding: 50px 0 50px 0;
+        }
+        .contact{
+            width: 100%;
+            text-align: center;
+        }
+        .contact-joinus-title h2{
+            text-align:center;
+        }
+        .or{
+            margin: 30px 0;
+        }
+        .title-model{
+            display: none;
+        }
+        /* 許願池 */
+        .join-us-background{
+          width: 100%;  
+        }
+        .earn-coin{
+            padding:50px;
+            text-align: center;
+        }
+        .earn-coin p{
+            margin-bottom: 50px;
+        }
+    }
+    @media screen and (min-width:769px) and (max-width:1199px){
+        /* KV*/
+        .welcome{
+            line-height: 50px;
+            text-indent: -3em;
+            font-size: 30px;
+            top:25%;
+            left:10%;
+        }
+        /* 新品介紹 */
+        .new-item-title h2{
+         text-align: center;
+        }
+        .new-product{
+         display: flex;
+         align-items: center;
+         justify-content: center;
+        }
+        .model{
+         width: 50%;
+         display: flex;
+         align-items: flex-end;
+         position: relative;
+        }
+        .second-new-product{
+         display: flex;
+         margin-top: 30px;
+        }
+        .second-describe{
+           width: 50%;
+        }
+        .second-describe{
+          display: flex;
+          flex-direction: column;
+          margin: 50px 0px 0px 50px;  
+        } 
+        .more{
+         margin: 50px 0;
+         text-align: center;
+        }
+        /* 客製化 */
+        .one-of-a-kind{
+         display: flex;
+         justify-content: space-evenly;
+         margin-top: 100px;
+        }
+        .service{
+         width: 45%;
+        }
+        .one-of-a-kind h3{
+         margin-bottom: 50px;
+        }
+         /* 品牌理念 */
+        .brand{
+         width: 100%;
+         margin: auto;
+        }
+        .brand-ideas{
+         text-align: center;
+         margin-top: 100px;
+         display: flex;
+        }
+        .brand-title h2{
+         text-align: center;
+        }
+        .idea{
+         width:33.333333%;
+         margin: auto;
+        }
+        .idea img{
+         width: 80%;
+         vertical-align: top;
+        }
+        .carefully-made{
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+        /* 聯絡我們 */
+        .contact-background{
+         background: linear-gradient(180deg, rgb(247,244,237)60%, rgba(255, 255, 255, 0)100%);
+        }
+        .contact-background{
+           padding: 50px 0 300px 0;;
+        }  
+        .contact{
+          width: 100%;
+          margin: auto;
+        }
+        .contact-us{
+            align-items: center;
+            display: flex;
+            margin-left: 50px;
+        }
+        .contact-joinus-title h2{
+           text-align: center;
+        }
+        .or{
+            margin: 0 80px;
+        }
+        /* 許願池 */
+        .collection{
+          width: 100%;
+          margin: auto;
+          display: flex;
+          align-items: center;
+        }
+        .title-model{
+         width:30%;
+         z-index: 1;
+         margin: -50px -100px 0 0;
+        }
+       .title-model img{
+          width: 100%;
+          border-radius: 0px 50px 0px 50px;
+        } 
+        .excited{
+         color: #fff;
+         text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+         font-style: italic;
+         position: relative;
+         top:20px;
+        }
+        .earn-coin{
+         display: flex;
+         justify-content: center;
+         
+         width:70%;
+         padding: 50px 0px 300px 0px;
+         margin-left: auto;
+        }
+        
+        .earn-coin .sign-up{
+          margin-left: 10%;
+        }
+    }
+    @media screen and (min-width:1200px){
+        /* 新品介紹 */
+        .new-product{
+         display: flex;
+         align-items: center;
+         justify-content: center;
+        }
+        .model{
+         width: 50%;
+         display: flex;
+         align-items: flex-end;
+         position: relative;
+        }
+        .model-img{
+         transition: 2s;
+        }
+        .describe-link:hover{
         color: #ff3399;
+        }
+        .model-img:hover{
+         opacity: .5; 
+        }
+        .more a:hover{
+         color:#ff3399
+        }
+        .second-new-product{
+         display: flex;
+         flex-direction: row-reverse;
+        }
+        .second-describe{
+          margin: 170px 40px 0px 0px;  
+           width: 50%;
+        }
+        .second-describe{
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+        } 
+        .second-describe>p{
+         text-align: end;
+        }
+        .second-price{
+         text-align: end;
+        }
+        .second-price .sale{
+          margin: 20px 0px 30px 0px;
+        }
+        .more{
+         text-align: end;
+        }
+        /* 客製化 */
+        .one-of-a-kind{
+         display: flex;
+         justify-content: space-evenly;
+         margin-top: 100px;
+        }
+        .service{
+         width: 40%;
+        }
+        .one-of-a-kind h3{
+         margin-bottom: 50px;
+        }
+        .service{
+         overflow: hidden;
+        }
+        .service img:hover{
+         transform:scale(1.2 , 1.2);
+        }
+        /* 品牌理念 */
+        .circle{
+         width: 170px;
+         height: 90px;
+         position: absolute;
+         bottom:-12%;
+         left: 11%;
+         background: rgb(239,235,234);
+         border-radius:  0 0 100px 100px;
+        }
+        .circle1{
+         width: 170px;
+         height: 98px;
+         position: absolute;
+         bottom:0;
+         left: 45%;
+         background: rgb(247,244,237);
+         border-radius:100px 100px 0 0 ;
+        }
+        .circle2{
+         width: 170px;
+         height: 90px;
+         position: absolute;
+         bottom:-12%;
+         right: 11%;
+         background:  rgb(239,235,234);
+         border-radius: 0 0 100px 100px; 
+        }
+        .brand{
+         width: 1200px;
+         margin: auto;
+        }
+        .brand-ideas{
+         text-align: center;
+         height: 500px;
+         margin-top: 100px;
+        }
+        .idea{
+         width:33.333333%;
+         margin: auto;
+        }
+        .idea img{
+         width: 70%;
+         vertical-align: top;
+        }
+        .carefully-made{
+         position: relative;
+         top:-10%;
+        }
+        .one-and-only{
+         position: relative;
+         top: -35%;
+         left:-18%;
+        }
+        .touching{
+         position: relative;
+         top: -93%;
+         left:18%;
+        }
+        /* 聯絡我們 */
+        .contact-background{
+         background: linear-gradient(180deg, rgb(247,244,237)60%, rgba(255, 255, 255, 0)100%);
+        }
+        .contact-background{
+           padding:100px 0px 200px 0px;
+        }  
+        .contact{
+          width: 1200px;
+          margin: auto;
+        }
+        .contact-us{
+            align-items: center;
+            display: flex;
+            justify-content: space-around;
+            padding-bottom: 100px;
+            position: relative;
+        }
+        .contact-joinus-title h2{
+           margin-top: 100px;
+        }
+        .appointment a:hover{
+          color: #ff3399;
+        }
+        /* 許願池 */
+        .join-us-background{
+          margin-top: -100px;
+        }
+        .collection{
+          width: 1200px;
+          margin: auto;
+          display: flex;
+          align-items: center;
+        }
+        .title-model{
+         width:30%;
+         margin: -15% -10% 0 0;
+         z-index: 1;
+        }
+       .title-model img{
+          width: 100%;
+          border-radius: 0px 50px 0px 50px;
+        } 
+        .excited{
+         color: #fff;
+         text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+         font-style: italic;
+         position: relative;
+         top:20px;
+        }
+        .earn-coin{
+         display: flex;
+         justify-content: center;
+         width:70%;
+         padding: 30px 0px 300px 0px;
+        }
+        .fountain:hover{
+          color: #ff3399;
+        }
+        .earn-coin .sign-up{
+          margin-left: 10%;
+        }
     }
-    .title-model{
-        width:30%;
-        margin: -15% -10% 0 0;
-        z-index: 1;
-    }
-    .title-model img{
-        width: 100%;
-        border-radius: 0px 50px 0px 50px;
-    } 
-   
+
     </style>
     <script type="text/javascript">
 
@@ -473,9 +723,17 @@
 </section>
 <!-- 幻燈片 -->
 <div class="slider">
-        <img src="album/nizuc-cancun-wedding.jpg" alt="Happy Wedding">
-        <button class="left-btn">◀</button>
-        <button class="right-btn">▶</button>
+        <div class="wedding-slider owl-carousel owl-theme">
+            <div class="item">
+                <img src="album/nizuc-cancun-wedding.jpg" alt="Happy Wedding">
+            </div>
+            <div class="item">
+                <img src="album/young-bride-groom-having-beach-wedding.jpg" alt="Happy Wedding">
+            </div>
+            <div class="item">
+                <img src="album/groom-black-tuxedo-hugs-tender-stunning-bride-while-they-stand_8353-8050.jpg" alt="Happy Wedding">
+            </div>
+        </div>
         <p class="welcome"><span class="first-line">Welcome to Felix Jewelry</span><br>
            <span class="second-line">Where fantasies come true</span>
         </p>
@@ -503,7 +761,7 @@
                 <div class="price-btn">
                     <div class="price">
                         <div class="original">原價:<span>NT3,000</div>
-                        <div class="sale">新品優惠:NT$2,000</div>
+                        <div class="sale">新品優惠: NT$2,000</div>
                     </div>
                         <a href="#"><img src="album/pink-button.png" alt="粉紅按鈕"></a>
                 </div>   
@@ -525,7 +783,7 @@
                     <div class="second-price-btn">
                         <div class="second-price">
                             <div class="original">原價:<span>NT3,000</div>
-                            <div class="sale">新品優惠:NT$2,000</div>
+                            <div class="sale">新品優惠: NT$2,000</div>
                         </div>
                         <a href="#"><img src="album/pink-button.png" alt="粉紅按鈕"></a>
                     </div>
@@ -548,7 +806,7 @@
                     <div class="price-btn">
                         <div class="price">
                             <div class="original">原價:<span>NT3,000</div>
-                            <div class="sale">新品優惠:NT$2,000</div>
+                            <div class="sale">新品優惠: NT$2,000</div>
                         </div>
                         <a href="#"><img src="album/pink-button.png" alt="粉紅按鈕"></a>
                     </div>
@@ -564,14 +822,14 @@
             <h3>客製化選擇</h3>
                 <a href="cutomize.html">
                     <img src="album/customize.png" alt="客製化">
-                    <p>我們也有提供客製化選擇，提供專屬於您的飾品。</p>
+                    <p>提供客製化選擇，製作專屬於您的飾品。</p>
                 </a> 
         </div>
         <div class="service">
             <h3>立即預約</h3>
             <a href="appointment.html">
                 <img src="album/GALA2.png" alt="門市">
-                <p>希望現場觀看亦可預約門市</p>
+                <p>希望現場觀看歡迎預約門市</p>
             </a>
         </div>
     </div> 
@@ -655,5 +913,34 @@
             &copy;Felix Jewelry. 2021. all rights reserved!
         </div>
 </footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+</script>
+<script src="owl/owl.carousel.min.js"></script>
+<script>
+$(document).ready(function(){
+    $('.wedding-slider').owlCarousel({
+    loop:true,
+    items:1,
+    margin:10,
+    nav:true,
+    autoplay:true,
+    autoplayTimeout:4000,
+    autoplayHoverPause:true,
+    animateOut: 'fadeOut',
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        1000:{
+            items:1
+        }
+    }
+})
+})
+</script>
 </body>
-</html>
+</html> 
