@@ -7,27 +7,21 @@
     <title>門市資訊</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="header css.css">
+    <script src="//s3-ap-northeast-1.amazonaws.com/justfont-user-script/jf-63454.js"></script>
     <style>
         body{
             background-image:url(album/rose.png);
             background-repeat: no-repeat;
             background-position: top right;
-            background-size: 500px;
         }
         .branch{
             padding-top:200px;
-            width:1200px;
             margin: auto;
         }
         .branch h2{
             font-size: 60px;
-            text-shadow: 10px 1px 10px grey;
+            color: #cc9966;
             text-align: center;
-        }
-        .store-title{
-            display: flex;
-            justify-content: center;
-            align-items: center;
         }
         .store{
             margin-top: 150px;
@@ -35,11 +29,9 @@
         }
         .store h3{
             font-size: 30px;
-            text-shadow: 10px 1px 10px grey;
+            color: #b8895b;
         }
         .pic-and-info{
-            display: flex;
-            justify-content: center;
             margin-top: 10px;
             border-top: 1px solid black;
             padding-top: 40px;
@@ -61,7 +53,6 @@
             line-height: 5em;
         }
         .icon{
-            width: 10%;
             margin-left: 50px;
         }
         .icon img{
@@ -70,8 +61,6 @@
             margin-top: 10px;
         }
         .contact-info{
-            width: 70%;
-            font-size: 25px;
             margin-left: 20px;
         }
         .appointment{
@@ -82,20 +71,113 @@
         .appointment a{
             color: #888;
         } 
-        .appointment a:hover{
-            color: #ff3399;
-        }
         .help{
             text-align: center;
             margin-top: 50px;
         }
-        section{
-            padding-bottom: 100px;
+        .rose{
             background-image: url(album/rose2.png);
             background-repeat: no-repeat;
-            background-position: bottom left;
-            background-position-y: 280vh;
-            background-size:500px;
+            background-position: bottom left;       
+        }
+        @media screen and (max-width:768px){
+            body{
+                background-size: 70%;
+                background-position: 100% 2%;
+            }
+            .branch{
+             width:100%;
+            }
+            .map iframe{
+                width: 100%;
+            }
+            .pic{
+              width: 100%;
+            }
+            .info{
+              width: 100%;
+            }
+            .icon{
+             width: 8%;
+            }
+            .help{
+                width: 80%;
+                margin: auto;
+                margin-top: 20px;
+            }
+            .contact-info{
+             font-size: 20px;
+            }
+            .rose{
+                padding-bottom: 60%;
+                background-size: contain;
+            }
+            .branch h2{
+                margin-top: 20%;
+            }
+        }
+        @media screen  and (min-width:769px) and (max-width:1199px){
+            body{
+                background-size: 40%;
+                background-position: 100% 5%;
+            }
+            .branch h2{
+                margin-top: 20%;
+            }
+            .branch{
+             width:100%
+            }
+            .pic-and-info{
+             display: flex;
+             justify-content: center;
+            }
+            .contact-info{
+             width: 80%;
+            }
+            .icon{
+             width: 5%;
+            }
+            .contact-info{
+             margin-bottom: 5%;
+             font-size: 20px;
+            }
+            .map iframe{
+                width: 70%;
+            }
+            .rose{
+                padding-bottom: 30%;
+                background-size: 40%;
+            }
+        }
+        @media screen and (min-width:1200px){
+            body{
+                background-size: 500px;
+                background-position: 100% 5%;
+            }
+            .branch{
+             width:1200px
+            }
+            .pic-and-info{
+             display: flex;
+             justify-content: center;
+            }
+            .contact-info{
+             width: 80%;
+            }
+            .icon{
+             width: 10%;
+            }
+            .appointment a:hover{
+             color: #ff3399;
+            }
+            .contact-info{
+             font-size: 25px;
+            }
+            .rose{
+             padding-bottom: 30%;
+             background-position-y: 280vh;
+             background-size:500px;
+            }
         }
     </style>
     <script type="text/javascript">
@@ -124,7 +206,7 @@
                <li><a href="cutomize.html">客製化</a></li>
                <li><a href="appointment.html">預約觀賞</a></li>
                <li><a href="fountain.html">折扣許願池</a></li>
-               <li><a href="store.html">門市資訊</a></li>
+               <li class="current-page"><a href="store.html">門市資訊</a></li>
            </ul>
             <div class="search">
                 <input type="search" placeholder="尋找水水飾品";>
@@ -143,7 +225,7 @@
    </nav>   
 </header>
     <!-- 機器人/購物車 -->
-    <section>
+<section>
         <div class="side-service">
             <div class="speaking-box">
                 <p>
@@ -157,12 +239,11 @@
              <a href="fountain.html"><img src="album/gold-pot.png" alt="service"></a>
              <a href="#"><img src="album/shopping-cart.png" alt="shopping-cart"></a>
         </div>
-    </section>
-    <!-- 門市資訊 -->
-    <section>
+</section>
+<!-- 門市資訊 -->
+<section class="rose">
         <div class="branch">
             <div class="store-title">
-                <img src="album/grocery-store.png" alt="客製化步驟">
                 <h2>門市資訊</h2>
             </div>
             <div class="store">

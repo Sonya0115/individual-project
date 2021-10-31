@@ -7,11 +7,10 @@
     <title>花戀</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="header css.css">
+    <script src="//s3-ap-northeast-1.amazonaws.com/justfont-user-script/jf-63454.js"></script>
     <style>
         /* 產品介紹 */
         .product-background{
-            padding-top: 250px;
-            width: 1200px;
             margin: auto;
         }
         .breadcrumb{
@@ -19,28 +18,14 @@
         }
         .breadcrumb li{
             display: inline;
-            font-size: 20px;
         }
         .breadcrumb li a{
             text-decoration: none;
             color: #888;
         }
-        .breadcrumb li a:hover{
-            color: #ff3399;
-            font-weight: bold;
-        }
         .breadcrumb li+li::before{
             content: " / ";
             padding: 10px;
-        }
-        .product{
-            display: flex;
-        }
-        .model{
-            width: 50%;
-        }
-        .model .main-pic{
-            width: 500px;
         }
         .model .main-pic img{
             width: 100%;
@@ -51,7 +36,6 @@
             vertical-align: top;
         }
         .other-pics{
-            width: 500px;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-evenly;
@@ -63,144 +47,56 @@
             cursor: pointer;
         }
         .description h2{
-            font-size: 50px;
             font-weight: bold;
-            color: #ff3399;
-            margin-bottom: 50px;
-            padding: 10px; 
-            border-radius: 10px;
-            background: linear-gradient(#ccc, transparent);
+            color: #cc9966;
         }
         .description>p{
-            font-size: 20px;
             color: #888;
-            border-bottom: 1px solid black;
+            border-bottom: 1px solid #cc9966;
             padding: 0px 0px 10px 0px;
-        }
-        .product-page-price{
-            align-items: flex-end;
-            justify-content: space-between;
-            margin: 200px 0px 100px 0px;
-            line-height: 1em;
         }
         .price>p{
             font-size: 20px;
         }
-        .appointment{
-            width:500px;
-            font-size: 25px;
-            background: linear-gradient( transparent,#ccc);
-            padding: 10px;
-            border-radius: 10px;
-        }
         .appointment-link{
-            text-align: end;
             margin-top: 20px;
         }
         .appointment-link>a{
             color: #888;
         }
-        .appointment-link>a:hover{
-            color: #ff3399;
-            font-weight: bold;
-        }
         .selection{
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            border-top: 5px solid black;
-            border-bottom: 5px solid black;
-            margin: 100px 0px;
+            border-top: 5px solid rgba(204,153,102,.5);
+            border-bottom: 5px solid rgba(204,153,102,.5);
         }
         .choose{
             display: inline-block;
-            width:20%;
             text-align: center;
             color: #ff3399;
             text-decoration: none; 
         }
         .choose img{
-            width:200px;
             margin-bottom: 20px;
-        }
-        .catalogue a{
-            display: flex;
-            flex-direction: row-reverse;
-            align-items: center;
-            justify-content: center;
-            border-left: 5px solid black;
-            border-right: 5px solid black;
-            justify-content: space-evenly;
-        }
-        .catalogue-pic {
-            width: 100px;
-            height: 200px; 
+            vertical-align: top;
         }
         .catalogue-pic img{
             width: 100%;
             margin: 50px 0px;
-        }
-        .last a:hover{
-            color:#ff3399;
-        }
-        .catalogue a:hover{
-            color:#ff3399
-        }
-        .next a:hover{
-            color:#ff3399
+            vertical-align: top;
         }
         .choose a{
             text-decoration: none;
-            font-size: 20px;
             color: #888;
-        }
-        .last a{
-            text-align: center;
-            margin-top: 50px;
-        }
-        .next a{
-            text-align: center;
-        }
-        .next a{
-         margin-left:-10px
         }
         /* 售後服務 */
         .information{
-            width: 1200px;
             margin: auto;
         }
-        .after-service{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .after-service img{
-            width: 500px;
-            border-radius: 10px;
-            z-index: 1;
-        }
         .customer{
-            width: 600px;
-            height: 400px;
-            background-color: #888;
-            border-radius: 10px;
-            margin-left: -250px;
+            background-color: #b8895b;
             padding:20px;
             color:#fff;
-        }
-        .customer h3{
-            width:300px;
-            padding:60px 0px 30px 0px;
-            font-size: 40px;
-            margin-left: auto;
-            margin-right: -30PX;
-        }
-        .customer p{
-            width:300px;
-            font-size: 25px;
-            line-height: 1.5em;
-            margin-left: auto;
-            margin-right: 30PX;
         }
         .customer a{
             display: block;
@@ -210,44 +106,403 @@
             font-size: 25px;
             color: brown;
         }
-        /* 客製化 */
-        .customize{
+        
+        @media screen and (max-width:768px){
+            /* 產品介紹 */
+            .product-background{
+               width: 100%;
+               padding-top: 100px;
+            }
+            .breadcrumb{
+                text-align: center;
+            }
+            .breadcrumb li{
+              font-size: 18px;
+            }
+            .model{
+             width: 90%;
+             margin: auto;
+            }
+            .model .main-pic{
+             width: 100%;
+            }
+            .other-pics{
+             width: 100%;
+            }
+            .description{
+                width: 100%;
+                padding: 20px 0;
+                margin-top: 100px;
+                background-color: rgb(245,231,217);
+            }
+            .description h2{
+                font-size: 30px;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .description>p{
+             font-size: 18px;
+             text-align: center;
+            }
+            .product-page-price{
+                flex-direction: column;
+                text-align: center;
+                margin: 20px 0;
+            }
+            .product .sale{
+                margin: 10px 0;
+            }
+            .price-btn a img{
+                margin:20px 0 0 -30%;
+            }
+            .appointment>p{
+                text-align: center; 
+            }
+            .appointment-link{
+             text-align: center;
+            }
+            .selection{
+             justify-content: center;
+            }
+            .choose img{
+             width:80%;
+             vertical-align: top;
+            }
+            .choose a{
+             font-size: 18px;
+            }
+            .choose:nth-child(2){
+                border-right: 5px solid rgba(204,153,102,.5);  
+            }
+            .catalogue a{
+                display: none;
+            }
+            .arrow{
+                display: none;
+            }
+            /* 售後服務 */
+            .information{
+             width: 100%;
+            }
+            .after-service img{
+             width: 100%;
+             vertical-align: top;
+            }
+            .customer h3{ 
+                font-size: 25px;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .customer p{ 
+                font-size: 20px;
+                line-height: 1.5em;
+            }
+            /* 客製化 */
+            .customize img{
+             width: 100%;
+             vertical-align: top;
+            }
+            /* 門市資訊 */
+            .store img{
+                width: 100%;
+                vertical-align: top;
+            }
+        }
+        @media screen and (min-width:769px) and (max-width:1199px){
+            /* 產品介紹 */
+            .product-background{
+               width: 100%;
+               padding-top: 100px;
+            }
+            .breadcrumb{
+                padding-top: 30px;
+                text-align: center;
+            }
+            .breadcrumb li{
+              font-size: 20px;
+            }
+            .model{
+             width: 70%;
+             margin: auto;
+            }
+            .model .main-pic{
+             width: 100%;
+            }
+            .other-pics{
+             width: 100%;
+            }
+            .description{
+                width: 100%;
+                padding: 50px 0;
+                margin-top: 100px;
+                background-color: rgb(245,231,217);
+            }
+            .description h2{
+                font-size: 40px;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .description>p{
+             font-size: 18px;
+             text-align: center;
+            }
+            .product-page-price{
+                justify-content: center;
+                margin: 50px 0;
+            }
+            .product .sale{
+                margin: 10px 0;
+            }
+            .appointment{
+                font-size: 20px;
+            }
+            .appointment>p{
+                text-align: center; 
+            }
+            .appointment-link{
+             text-align: center;
+            }
+            .selection{
+             margin: 100px 0px;
+            }
+            .catalogue-pic {
+             width: 100px;
+             height: 200px; 
+            }
+            .next a{
+             text-align: center;
+            }
+            .next a{
+             margin-left:-10px
+            }
+            .catalogue a{
+             border-left: 5px solid rgba(204,153,102,.5);
+             border-right: 5px solid rgba(204,153,102,.5);
+             justify-content: space-evenly;
+            }
+            .selection{
+              justify-content: space-evenly;
+            }
+            .catalogue a{
+                display: none;
+            }
+            .choose:nth-child(2){
+                border-right: 5px solid rgba(204,153,102,.5); 
+                padding-right: 10%; 
+            }
+            /* 售後服務 */
+            .info{
+                display: flex;
+            }
+            .after-service img{
+             width: 50%;
+             vertical-align: top;
+             margin-bottom: 50px;
+            }
+            .customer{
+                padding: 30px;
+                margin-bottom: 50px;
+            }
+            .customer h3{ 
+                font-size: 25px;
+                text-align: center;
+            }
+            .customer p{ 
+                font-size: 20px;
+                line-height: 1.5em;
+            }
+            /* 客製化 */
+            .customize img{
+             width: 50%;
+             vertical-align: top;
+             margin-bottom: 50px;
+            }
+            /* 門市資訊 */
+            .store img{
+                width: 50%;
+                vertical-align: top;
+                margin-bottom: 50px;
+            }
+        }
+        @media screen and (min-width:1200px){
+            /* 產品介紹 */
+            .product-background{
+               width: 1200px;
+               padding-top: 250px;
+            }
+            .breadcrumb li{
+              font-size: 20px;
+            }
+            .breadcrumb li a:hover{
+             color: #cc9966;
+             font-weight: bold;
+            }
+            .product{
             display: flex;
-            flex-direction: row-reverse;
-            justify-content: center;
-            align-items: center;
-            margin: 100px 0px 100px 220px;
-        }
-        .customize img{
-            width: 500px;
-            border-radius: 10px;
-            z-index: 1;
-        }
-        .customize-txt{
-            margin-right: -250px;
-        }
-        .customize h3{
-            margin-right: auto;
-            margin-left: 100PX;
-        }
-        .customize p{
-            margin-right: auto;
-            margin-left: 30PX;
-        }
-        .customize a{
-            margin-right: auto;
-            margin-left: 30PX;
-        }
-        /* 門市資訊 */
-        .store{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .store img{
-            width: 500px;
-            border-radius: 10px;
-            z-index: 1; 
+            }
+            .model{
+             width: 50%;
+            }
+            .model .main-pic{
+             width: 500px;
+            }
+            .other-pics{
+             width: 500px;
+            }
+            .description h2{
+             font-size: 50px;
+             padding: 10px; 
+             background: linear-gradient(rgb(245,231,217), transparent);
+             border-radius: 10px;
+            }
+            .description>p{
+             font-size: 20px;
+            }
+            .product-page-price{
+             align-items: flex-end;
+             justify-content: space-between;
+             margin: 200px 0px 100px 0px;
+             line-height: 1em;
+            }
+            .appointment-link{
+             text-align: end;
+            }
+            .last a:hover{
+              color:#cc9966;
+            }
+            .catalogue a:hover{
+              color:#cc9966
+            }
+            .next a:hover{
+              color:#cc9966
+            }
+            .appointment{
+             width:500px;
+             font-size: 25px;
+             background: linear-gradient( transparent,rgb(245,231,217));
+             padding: 10px;
+             border-radius: 10px;
+            }
+            .appointment-link>a:hover{
+             color: #cc9966;
+             font-weight: bold;
+            }
+            .choose{
+             width:90%;
+            }
+            .choose img{
+             width:100%;
+            }
+            .catalogue a{
+             display: flex;
+             flex-direction: row-reverse;
+             align-items: center;
+             margin:0 10px;
+            }
+            .choose a{
+             font-size: 20px;
+            }
+            .last a{
+             text-align: center;
+             margin-top: 50px;
+            }
+            .selection{
+             margin: 100px 0px;
+            }
+            .catalogue-pic {
+             width: 100px;
+             height: 200px; 
+            }
+            .next a{
+             text-align: center;
+            }
+            .next a{
+             margin-left:-10px
+            }
+            .catalogue a{
+             border-left: 5px solid rgba(204,153,102,.5);
+             border-right: 5px solid rgba(204,153,102,.5);
+             justify-content: space-evenly;
+            }
+            .selection{
+              justify-content: space-evenly;
+            }
+            /* 售後服務 */
+            .information{
+             width: 1200px
+            }
+            .after-service{
+             display: flex;
+             justify-content: center;
+             align-items: center;
+            }
+            .customer{
+             width: 600px;
+             height: 400px;
+             border-radius: 10px;
+             margin-left: -250px;
+            }
+            .after-service img{
+             width: 500px;
+             border-radius: 10px;
+             z-index: 1;
+             vertical-align: top;
+            }
+            .customer h3{
+             width:300px;
+             padding:60px 0px 30px 0px;
+             font-size: 40px;
+             margin-left: auto;
+             margin-right: -30PX;
+            }
+            .customer p{
+             width:300px;
+             font-size: 25px;
+             line-height: 1.5em;
+             margin-left: auto;
+             margin-right: 30PX;
+            }
+            /* 客製化 */
+            .customize{
+             display: flex;
+             flex-direction: row-reverse;
+             justify-content: center;
+             align-items: center;
+             margin: 100px 0px 100px 220px;
+            }
+            .customize img{
+             width: 500px;
+             border-radius: 10px;
+             z-index: 1;
+             vertical-align: top;
+            }
+            .customize-txt{
+             margin-right: -250px;
+            }
+            .customize h3{
+             margin-right: auto;
+             margin-left: 100PX;
+            }
+            .customize p{
+             margin-right: auto;
+             margin-left: 30PX;
+            }
+            .customize a{
+             margin-right: auto;
+             margin-left: 30PX;
+            }
+            /* 門市資訊 */
+           .store{
+             display: flex;
+             align-items: center;
+             justify-content: center;
+            }
+            .store img{
+             width: 500px;
+             border-radius: 10px;
+             z-index: 1; 
+             vertical-align: top;
+            }
         }
     </style>
     <script type="text/javascript">
@@ -325,7 +580,7 @@
     </nav>   
 </header>
      <!-- 機器人/購物車 -->
-     <section>
+<section>
         <div class="side-service">
             <div class="speaking-box">
                 <p>
@@ -339,7 +594,7 @@
              <a href="fountain.html"><img src="album/gold-pot.png" alt="service"></a>
              <a href="#"><img src="album/shopping-cart.png" alt="shopping-cart"></a>
         </div>
-    </section>
+</section>
     <!-- 產品介紹 -->
     <section class="product-background">
         <div class="breadcrumb">
@@ -365,7 +620,7 @@
                 <p>優雅又精緻的頭飾讓您成為最美的新娘，純手工製作。</p>
                 <div class="price-btn product-page-price">
                     <div class="price">
-                        <div class="orignal">原價:<span>NT3,000</div>
+                        <div class="original">原價:<span>NT3,000</div>
                         <div class="sale">新品優惠:NT$2,000</div>
                         <p>立即購買即享1枚許願池金幣!</p>
                     </div>
@@ -379,11 +634,11 @@
         </div>
         <!-- 上一個品項/下一個品項 -->
         <div class="selection">
-            <a href="#" class="choose">◀</a href="#">
+            <a href="#" class="choose arrow">◀</a href="#">
            <div class="choose last"> 
                 <a href="#">
                   <img src="album/flower-lang-noback2.png" alt="花語">
-                  <div>花語</div>
+                  <div class="flower">花語</div>
                 </a>
             </div>
             <div class="choose catalogue">
@@ -391,21 +646,21 @@
                       <div class="catalogue-pic">
                           <img src="album/menu.png" alt="飾品一覽">
                       </div>
-                  <div>飾品一覽</div>
+                  <div class="flower">飾品一覽</div>
                 </a>
             </div>
             <div class="choose next">
                 <a href="#">
                   <img src="album/seduce-noback.png" alt="迷惑">
-                  <div>迷惑</div>
+                  <div class="flower">迷惑</div>
                </a>
             </div>
-            <a href="#" class="choose">▶</a href="#">
+            <a href="#" class="choose arrow">▶</a href="#">
         </div>
     </section>
     <!-- 售後服務 -->
     <section class="information">
-        <div class="after-service">
+        <div class="after-service info">
             <img src="album/B3-DIPLOMA-IN-JEWELERY-MAKING.jpg" alt="售後服務">
             <div class="customer after-service-txt">
                 <h3>售後服務</h3>
@@ -414,7 +669,7 @@
                 <a href="#">more</a>
             </div>            
         </div>
-        <div class=" customize">
+        <div class="customize info">
             <img src="album/istockphoto-155428452-612x612.jpg" alt="">    
             <div class="customer customize-txt">
                 <h3>客製化</h3>
@@ -423,7 +678,7 @@
             </div>
         </div>
         <!-- 門市資訊 -->
-        <div class="store">
+        <div class="store info">
             <img src="album/GALA-BRIDAL-jewelry-by-Ichiro-Nishiwaki-Design-Office-Tokyo-Japan-04.jpg" alt="">    
             <div class="customer store-txt">
                 <h3>門市外觀</h3>

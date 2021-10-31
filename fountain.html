@@ -9,12 +9,14 @@
     <link rel="stylesheet" href="header css.css">
     <style>
         /* 主選單 */
+        .main-nav-bar{
+            justify-content: flex-start;
+        }
         .member{
             display: flex;
-            font-size: 18px;
+            font-size: 13px;
         }
         .logged-in{
-            margin:0px 20px;
             color: #ff3399;
         }
         .logged-in a{
@@ -22,11 +24,12 @@
             text-underline-offset: 5px;
         }
         .log-out{
-            color: #fff;
+            margin-left: 5px;
+            color: #000;
             text-decoration: none;
         }
         .log-out:hover{
-            text-decoration: 1px underline #fff;
+            text-decoration: 1px underline #000;
             text-underline-offset: 5px;
         }
         /* 金幣桶 */
@@ -45,34 +48,21 @@
         .forest{
             background-image: url(album/forest.png);
             background-repeat: no-repeat;
-            background-size: contain;
+            background-size: cover;
             background-position: center;
             position: relative;
         }
-        .fountain{
-            width: 1200px;
-            height: 1200px;
-            margin: auto;
-            text-align: center;
-            
-        }
-        .fountain img{
-            margin-top: 100px;
-            width: 800px;
-        }
         .distance{
-            width: 700px;
-            height:40px;
             background-color: #99ff00;
-            position: relative;
+            position: absolute;
             border-radius: 10px;
-            bottom:200px;
-            left:275px;
+            bottom:30%;
+            left:25%;
         }
         .distance img{
-            width: 100px;
+            width: 10%;
             position: absolute;
-            top:-130px;
+            top:-20%;
             left: 0;
             box-shadow: 5px 5px 10px black;
             border-radius: 50%;
@@ -83,13 +73,9 @@
         }
         .strength{
             margin-left: auto;
-            width: 40px;
-            height:500px;
             background: linear-gradient(#ff6633,#ffcc66,#ffcc99);
-            position: relative;
+            position: absolute;
             border-radius: 10px;
-            right: 200px;
-            bottom:800px
         }
         .triangle{
             border-right: 30px solid red;
@@ -103,13 +89,8 @@
             animation-play-state:running;
         }
         .start{
-            width:300px;
+            font-size: 20px;
             position: absolute;
-            bottom:50px;
-            left:0;
-            right:0;
-            margin: auto;
-            font-size: 30px;
             border-radius: 10px;
             border: none;
             background-color: transparent;
@@ -118,38 +99,26 @@
         .start::before{
             content: "開始遊戲";
             color:#fff;
-            position: relative;
-            top: 65px;
-        }
-        @keyframes run {
-            0%{left:0px}
-            100%{left:650px}
-        }
-        @keyframes jump {
-            0%{top:0px}
-            100%{top:480px}
+            position: absolute;
+            top: 25%;
+            bottom: 0;
+            left: 0;
+            right:0;
+            margin: auto;
         }
         .introduction{
-            width: 1200px;
             margin: auto;
-            background-image: url(album/pngwing.com.png);
-            background-size: cover;
-            padding: 200px 0px;
         }
         .introduction h2{
-            font-size: 40px;
             text-align: center;
             margin-bottom: 50px;
             font-weight: bold;
         }
         .story{
-            width: 700px;
             margin: auto;
-            font-size: 25px;
-            line-height: 2em;
         }
         .reminder{
-            margin-top: 50px;
+            margin-top: 5%;
         }
         .green-bar{
             color:#66cc00;
@@ -159,12 +128,7 @@
         }
         /* 遊戲介紹 */
         .trophy-intro{
-            width: 1200px;
-            display: flex;
             margin: auto;
-        }
-        .trophy{
-            width:33.333333%
         }
         .trophy img{
             width: 100%;
@@ -175,6 +139,170 @@
             font-size: 18px;
             line-height: 1.5em;
         }
+        @media screen and (max-width:768px){
+            .fountain{
+                width: 100%;
+            }
+            .fountain-img{
+              margin-top: 50px;
+              width: 100%;
+            }
+            .distance{
+              width: 80%;
+              height:5%;
+              bottom:15%;
+              left:10%;
+            }
+            .strength{
+              width: 5%;
+              height: 50%;
+              right: 10%;
+              top:20%
+            }
+            .start img{
+              width:30%;
+            }
+            .start{
+                width: 100%;
+                bottom:0;
+                margin-left: auto;
+            }
+            .introduction{
+              width: 100%;
+              background-image: url(album/scroll.jpg);
+              background-size: contain;
+              background-repeat: no-repeat;
+              background-position: center;
+              padding: 20% 0;
+              margin-top: 50px;
+            }  
+            .introduction h2{
+             font-size: 25px;
+            } 
+            .story{
+             width: 300px;
+             font-size: 100%;
+             line-height: 1.5em;
+            }
+            .trophy{
+                text-align: center;
+                width:100%
+            }
+            .trophy img{
+                width:70%
+            }
+            .trophy-intro{
+             width: 100%;
+            }
+        }
+        @media screen and (min-width:769px) and (max-width:1199px){
+            .fountain{
+                width: 100%;
+            }
+            .fountain-img{
+              margin-top: 50px;
+              width: 100%;
+            }
+            .distance{
+              width: 80%;
+              height:5%;
+              bottom:15%;
+              left:10%;
+            }
+            .strength{
+              width: 5%;
+              height: 50%;
+              right: 10%;
+              top:20%;
+            }
+            .start img{
+              width:250px;
+            }
+            .start{
+                font-size: 30px;
+                width: 100%;
+                bottom:0;
+                margin-left: auto;
+            }
+            .introduction{
+             width: 100%;
+             background-size: contain;
+             background-image: url(album/pngwing.com.png);
+             background-repeat: no-repeat;
+             background-position: center;
+             margin-bottom: 100px;
+             padding-bottom: 10%;
+            }
+            .introduction h2{
+             font-size: 25px;
+             padding-top: 100px;
+            }
+            .story{
+             width:40%;
+             font-size: 18px;
+             line-height: 1.5em;
+            }
+            .trophy{
+                text-align: center;
+            }
+            .trophy img{
+                width:50%
+            }
+        }
+        @media screen and (min-width:1200px){
+        .fountain{
+            width: 1200px;
+            height: 1200px;
+            margin: auto;
+            text-align: center;
+            
+        }
+        .fountain-img{
+            margin-top: 100px;
+            width: 800px;
+        }
+        .distance{
+            width: 600px;
+            height:40px;
+            bottom:20%;
+            left:30%;
+        }
+        .strength{
+            width: 40px;
+            height:500px;
+            right: 25%;
+            bottom:35%
+        }
+        .start{
+           font-size: 30px;
+           width:300px;
+           bottom:50px;
+           left:0;
+           right:0;
+           margin: auto;
+        }
+        .introduction{
+            width: 1200px;
+            background-size: cover;
+            background-image: url(album/pngwing.com.png);
+            padding: 200px 0px;
+        }
+        .introduction h2{
+            font-size: 40px;
+        }
+        .story{
+            width: 700px;
+            font-size: 25px;
+            line-height: 2em;
+        }
+        .trophy{
+            width:33.333333%
+        }
+        .trophy-intro{
+            width: 1200px;
+            display: flex;
+        }
+    }
     </style>
     <script type="text/javascript">
 
@@ -201,7 +329,7 @@
                <li><a href="catalogue.html">水水的飾品</a></li>
                <li><a href="cutomize.html">客製化</a></li>
                <li><a href="appointment.html">預約觀賞</a></li>
-               <li><a href="fountain.html">折扣許願池</a></li>
+               <li class="current-page"><a href="fountain.html">折扣許願池</a></li>
                <li><a href="store.html">門市資訊</a></li>
            </ul>
             <div class="search">
@@ -210,8 +338,8 @@
             </div>
        </div>
         <div class="member">
-            <a class="log-in" href="#">登入</a>
-            <a class="sign-up"href="#">註冊</a>
+            <p><a class="logged-in" href="#">郝美麗</a> ,您好</p>
+            <a class="log-out"href="#">登出</a>
         </div>
         <button class="hb">
             <span></span>
@@ -241,7 +369,7 @@
 <section>
     <div class="forest">
         <div class="fountain">
-            <img src="album/no-background.png" alt="許願池">
+            <img class="fountain-img" src="album/no-background.png" alt="許願池">
             <div class="distance">
                 <img src="album/money.png" alt="金幣">
             </div>
@@ -249,7 +377,10 @@
                 <div class="triangle"></div>
             </div>
         </div>
-        <button class="start"><img src="album/button.png" alt=""></button>
+
+        <div class="contain-btn">
+            <button class="start"><img src="album/button.png" alt=""></button>
+        </div>
     </div>
 </section>
 <!-- 遊戲介紹 -->

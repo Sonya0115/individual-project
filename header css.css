@@ -150,7 +150,6 @@ footer{
 } 
 .social-media{
     display: flex;
-    justify-content: center;
 }
 .social-media img{
     width:50px;
@@ -165,7 +164,7 @@ footer{
     width: 100%;
 }
 .current-page a{
-    color: #ff3399;
+    color: #cc9966;
 }
 /* 手機板 */
 @media screen and (max-width:768px){
@@ -239,8 +238,13 @@ footer{
     .footer-links{
         display: none;
     }
+    .social-media{
+        width: 250px;
+        flex-wrap: wrap;
+        margin: auto;
+        
+    }
 }
-
 @media screen and (min-width:769px) and (max-width:1199px){
     .main-nav-bar-background{
         position: fixed;
@@ -311,6 +315,9 @@ footer{
     .footer-links{
         display: none;
     }
+    .social-media{
+       justify-content: center;
+    }
 }
 @media screen and (min-width:1200px){
     .main-nav-bar-background{
@@ -363,8 +370,11 @@ footer{
         font-size: 25px;
     }
     .footer-links a:hover{
-        color: #ff3399;
-    }     
+        color: #cc9966;
+    }
+    .social-media{
+       justify-content: center;  
+    }   
     .social-media img{
      margin:20px 0px 0px 50px;
     } 

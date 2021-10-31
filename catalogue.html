@@ -7,6 +7,7 @@
     <title>水水的飾品</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="header css.css">
+    <script src="//s3-ap-northeast-1.amazonaws.com/justfont-user-script/jf-63454.js"></script>
     <style>
         /* 產品目錄  */
         body{
@@ -16,13 +17,12 @@
         }
         .catalogue{
             padding-top:250px;
-            width:1200px;
             margin: auto;
 
         }
         .catalogue h2{
             font-size: 60px;
-            text-shadow: 10px 1px 10px grey;
+            color: #cc9966;
             text-align: center;
             margin:150px 0px 80px 0px;
             
@@ -50,6 +50,7 @@
         .product-list{
             margin-top: 100px;
             display: flex;
+            justify-content: center;
             flex-wrap: wrap;
             margin-bottom: 300px;
         }
@@ -148,6 +149,7 @@
         }
         .pop-up{
             margin-left: 20px;
+            color: #cc9966;
         }
         .pages{
             display: flex;
@@ -171,18 +173,49 @@
             background-repeat: no-repeat;
             background-position: bottom left;
         }
+        @media screen and (max-width:768px){
+            body{
+                background-size: 70%;
+                background-position: 100% 2%;
+            }
+            .catalogue{
+                width:100%;
+            }
+            section{
+                background-size: 70%;
+                background-position: 0 97%;
+            }
+        }
+         @media screen and (min-width:1200px){
+            .catalogue{
+                width:1200px;
+            }
+        }
    </style>
    <script type="text/javascript">
 
     function openClosemenu(){
       document.getElementsByClassName("side-menu")[0].classList.toggle("hidemenu")
     }
+
     function CloseInfo(){
       document.getElementsByClassName("speaking-box")[0].classList.add("close-box")
+    }
+
+    function switchFavorite(e){
+        hearts=e.target;
+        if(hearts.title=="加入最愛"){
+          hearts.src="album/like-full.png"
+          hearts.title="取消最愛"
+        }else{
+          hearts.src="album/like.png";
+          hearts.title="加入最愛"
+        }
     }
     function init(){
         document.getElementsByClassName("hb")[0].onclick=openClosemenu;
         document.getElementsByClassName("close")[0].onclick=CloseInfo;
+        heart=document.getElementsByClassName("favorite")[0].onclick= switchFavorite;
     }
       window.addEventListener("load",init,false)
   </script>
@@ -195,7 +228,7 @@
        </a></h1>
        <div class="side-menu">
            <ul class="main-nav-bar-links">
-               <li><a href="catalogue.html">水水的飾品</a></li>
+               <li class="current-page"><a href="catalogue.html">水水的飾品</a></li>
                <li><a href="cutomize.html">客製化</a></li>
                <li><a href="appointment.html">預約觀賞</a></li>
                <li><a href="fountain.html">折扣許願池</a></li>
@@ -217,449 +250,448 @@
         </button> 
    </nav>   
 </header>
-       <!-- 機器人/購物車 -->
-    <section>
-        <div class="side-service">
-            <div class="speaking-box">
-                <p>
+<!-- 機器人/購物車 -->
+<section>
+    <div class="side-service">
+        <div class="speaking-box">
+            <p>
                     歡迎來到 <span>Felix Jewelry</span>,<br>
                     可以如何幫助您呢?
-                 </p>
-                 <div class="white-triangle"></div>
-                 <div class="close">X</div>
-            </div>
-             <button><img src="album/bot.png" alt="service"></button>
-             <a href="fountain.html"><img src="album/gold-pot.png" alt="service"></a>
-             <a href="#"><img src="album/shopping-cart.png" alt="shopping-cart"></a>
+                </p>
+                <div class="white-triangle"></div>
+                <div class="close">X</div>
         </div>
-    </section>
-    <!-- 產品目錄 -->
-    <section>
-        <div class="catalogue">
-            <!-- 新品一 -->
-            <h2>水水的飾品</h2>
-            <div class="information">
-                <p>共有45樣商品</p>
-                <form action="">
-                        <select class="categorize" name="product">
-                        　  <option value="new">由新到舊</option>
-                        　  <option value="price">由價位高到低</option>
-                        　  <option value="hot">熱門程度</option>
-                        </select>
-                </form>
-            </div>
-            <ul class="product-list">
-                <li class="product">
-                    <div class="model">
-                        <a href="product-description.html">
+            <button><img src="album/bot.png" alt="service"></button>
+            <a href="fountain.html"><img src="album/gold-pot.png" alt="service"></a>
+            <a href="#"><img src="album/shopping-cart.png" alt="shopping-cart"></a>
+    </div>
+</section>
+<!-- 產品目錄 -->
+<section>
+    <div class="catalogue">
+        <!-- 新品一 -->
+        <h2>水水的飾品</h2>
+        <div class="information">
+            <p>共有45樣商品</p>
+            <form action="">
+                    <select class="categorize" name="product">
+                        　 <option value="new">由新到舊</option>
+                        　 <option value="price">由價位高到低</option>
+                        　 <option value="hot">熱門程度</option>
+                    </select>
+            </form>
+        </div>
+        <ul class="product-list">
+            <li class="product">
+                <div class="model">
+                    <a href="product-description.html">
+                    <div class="pic">
+                        <img src="album/flower-love-2.png" alt="花戀">
+                    </div>
+                    <div class=pop-up>花戀</div></a>
+                    <div class="new">New</div>
+                    <div class="triangle"></div>
+                </div>
+                <div class="product-txt">
+                    <div class="price">
+                        <div class="orignal">原價: <span>NT$3,000</span></div>
+                        <div class="sale">新品優惠:2,000</div>
+                    </div>
+                    <div class="action">
+                        <div class="like">
+                            <button><img class="favorite"src="album/like.png" alt="收藏" title="加入最愛"></button>
+                        </div>
+                        <div class="shopping-cart">
+                            <button><img src="album/shopping-cart-black.png" alt="購物車"></button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <!-- 新品二 -->
+            <li class="product">
+                <div class="model">
+                    <a href="#">
+                        <div class="pic">
+                            <img src="album/flower-lang.png" alt="花語">
+                        </div>
+                        <div class=pop-up>花語</div>
+                    </a>
+                    <div class="new">New</div>
+                    <div class="triangle"></div>
+                </div>
+                <div class="product-txt">
+                    <div class="price">
+                        <div class="orignal">原價: <span>NT$4,000</span></div>
+                        <div class="sale">新品優惠:3,000</div>
+                    </div>
+                    <div class="action">
+                        <div class="like">
+                            <button><img class="favorite"src="album/like.png" alt="收藏" title="加入最愛"></button>
+                        </div>
+                        <div class="shopping-cart">
+                            <button><img src="album/shopping-cart-black.png" alt="購物車"></button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <!-- 新品三-->
+            <li class="product">
+                <div class="model">
+                    <a href="#">
+                        <div class="pic">
+                            <img src="album/seduce-3.png" alt="迷惑">
+                            </div>
+                        <div class=pop-up>迷惑</div>
+                    </a>
+                    <div class="new">New</div>
+                    <div class="triangle"></div>
+                </div>
+                <div class="product-txt">
+                    <div class="price">
+                        <div class="orignal">原價: <span>NT$3,500</span></div>
+                        <div class="sale">新品優惠:3,000</div>
+                    </div>
+                    <div class="action">
+                        <div class="like">
+                            <button><img class="favorite"src="album/like.png" alt="收藏" title="加入最愛"></button>
+                        </div>
+                        <div class="shopping-cart">
+                            <button><img src="album/shopping-cart-black.png" alt="購物車"></button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="product">
+                <div class="model">
+                    <a href="product-description.html">
+                        <div class="pic">
+                            <img src="album/model-2.png" alt="佳人的桂冠">
+                        </div>
+                        <div class=pop-up>佳人的桂冠</div>
+                    </a>
+                </div>
+                <div class="product-txt">
+                    <div class="price nosale">
+                            水水價:NT$5,000
+                    </div>
+                    <div class="action">
+                        <div class="like">
+                            <button><img class="favorite"src="album/like.png" alt="收藏" title="加入最愛"></button>
+                        </div>
+                        <div class="shopping-cart">
+                                <button><img src="album/shopping-cart-black.png" alt="購物車"></button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="product">
+                <div class="model">
+                    <a href="product-description.html">
+                        <div class="pic">
+                            <img src="album/seduce-3.png" alt="迷惑">
+                        </div>
+                        <div class=pop-up>迷惑</div>
+                    </a>
+                </div>
+                <div class="product-txt">
+                    <div class="price nosale">
+                            水水價:NT$2,000
+                    </div>
+                    <div class="action">
+                        <div class="like">
+                            <button><img class="favorite"src="album/like.png" alt="收藏" title="加入最愛"></button>
+                        </div>
+                        <div class="shopping-cart">
+                            <button><img src="album/shopping-cart-black.png" alt="購物車"></button>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="product">
+                <div class="model">
+                    <a href="product-description.html">
                         <div class="pic">
                             <img src="album/flower-love-2.png" alt="花戀">
                         </div>
-                        <div class=pop-up>花戀</div></a>
-                        <div class="new">New</div>
-                        <div class="triangle"></div>
-                    </div>
-                    <div class="product-txt">
-                        <div class="price">
-                            <div class="orignal">原價: <span>NT$3,000</span></div>
-                            <div class="sale">新品優惠:2,000</div>
-                        </div>
-                        <div class="action">
-                            <div class="like">
-                                <button><img src="album/like.png" alt="收藏"></button>
-                            </div>
-                            <div class="shopping-cart">
-                                <button><img src="album/shopping-cart-black.png" alt="購物車"></button>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                 <!-- 新品二 -->
-                <li class="product">
-                    <div class="model">
-                        <a href="#">
-                            <div class="pic">
-                                <img src="album/flower-lang.png" alt="花語">
-                            </div>
-                            <div class=pop-up>花語</div>
-                        </a>
-                        <div class="new">New</div>
-                        <div class="triangle"></div>
-                    </div>
-                    <div class="product-txt">
-                        <div class="price">
-                            <div class="orignal">原價: <span>NT$4,000</span></div>
-                            <div class="sale">新品優惠:3,000</div>
-                        </div>
-                        <div class="action">
-                            <div class="like">
-                                <button><img src="album/like.png" alt="收藏"></button>
-                            </div>
-                            <div class="shopping-cart">
-                                <button><img src="album/shopping-cart-black.png" alt="購物車"></button>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <!-- 新品三-->
-                <li class="product">
-                    <div class="model">
-                        <a href="#">
-                            <div class="pic">
-                              <img src="album/seduce-2.png" alt="迷惑">
-                            </div>
-                            <div class=pop-up>迷惑</div>
-                        </a>
-                        <div class="new">New</div>
-                        <div class="triangle"></div>
-                    </div>
-                    <div class="product-txt">
-                        <div class="price">
-                            <div class="orignal">原價: <span>NT$3,500</span></div>
-                            <div class="sale">新品優惠:3,000</div>
-                        </div>
-                        <div class="action">
-                            <div class="like">
-                                <button><img src="album/like.png" alt="收藏"></button>
-                            </div>
-                            <div class="shopping-cart">
-                                <button><img src="album/shopping-cart-black.png" alt="購物車"></button>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="product">
-                    <div class="model">
-                        <a href="product-description.html">
-                            <div class="pic">
-                              <img src="album/model-2.png" alt="佳人的桂冠">
-                            </div>
-                            <div class=pop-up>佳人的桂冠</div>
-                        </a>
-                    </div>
-                    <div class="product-txt">
-                        <div class="price nosale">
-                            水水價:NT$5,000
-                        </div>
-                        <div class="action">
-                            <div class="like">
-                                <button><img src="album/like.png" alt="收藏"></button>
-                            </div>
-                            <div class="shopping-cart">
-                                <button><img src="album/shopping-cart-black.png" alt="購物車"></button>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="product">
-                    <div class="model">
-                        <a href="product-description.html">
-                            <div class="pic">
-                              <img src="album/seduce-2.png" alt="迷惑">
-                            </div>
-                            <div class=pop-up>迷惑</div>
-                        </a>
-                    </div>
-                    <div class="product-txt">
-                        <div class="price nosale">
-                            水水價:NT$2,000
-                        </div>
-                        <div class="action">
-                            <div class="like">
-                                <button><img src="album/like.png" alt="收藏"></button>
-                            </div>
-                            <div class="shopping-cart">
-                                <button><img src="album/shopping-cart-black.png" alt="購物車"></button>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="product">
-                    <div class="model">
-                        <a href="product-description.html">
-                            <div class="pic">
-                              <img src="album/flower-love-2.png" alt="花戀">
-                            </div>
-                            <div class=pop-up>花戀</div>
-                        </a>
-                    </div>
-                    <div class="product-txt">
-                        <div class="price nosale">
+                        <div class=pop-up>花戀</div>
+                    </a>
+                </div>
+                <div class="product-txt">
+                    <div class="price nosale">
                             水水價:NT$1,000
+                    </div>
+                    <div class="action">
+                        <div class="like">
+                            <button><img class="favorite"src="album/like.png" alt="收藏" title="加入最愛"></button>
                         </div>
-                        <div class="action">
-                            <div class="like">
-                                <button><img src="album/like.png" alt="收藏"></button>
-                            </div>
-                            <div class="shopping-cart">
-                                <button><img src="album/shopping-cart-black.png" alt="購物車"></button>
-                            </div>
+                        <div class="shopping-cart">
+                            <button><img src="album/shopping-cart-black.png" alt="購物車"></button>
                         </div>
                     </div>
-                </li>
-                <li class="product">
-                    <div class="model">
-                        <a href="product-description.html">
-                            <div class="pic">
-                              <img src="album/model-2.png" alt="佳人的桂冠">
-                            </div>
-                            <div class=pop-up>佳人的桂冠</div>
-                        </a>
-                    </div>
-                    <div class="product-txt">
-                        <div class="price nosale">
+                </div>
+            </li>
+            <li class="product">
+                <div class="model">
+                    <a href="product-description.html">
+                        <div class="pic">
+                            <img src="album/model-2.png" alt="佳人的桂冠">
+                        </div>
+                        <div class=pop-up>佳人的桂冠</div>
+                    </a>
+                </div>
+                <div class="product-txt">
+                    <div class="price nosale">
                             水水價:NT$7,000
+                    </div>
+                    <div class="action">
+                        <div class="like">
+                            <button><img class="favorite"src="album/like.png" alt="收藏" title="加入最愛"></button>
                         </div>
-                        <div class="action">
-                            <div class="like">
-                                <button><img src="album/like.png" alt="收藏"></button>
-                            </div>
-                            <div class="shopping-cart">
-                                <button><img src="album/shopping-cart-black.png" alt="購物車"></button>
-                            </div>
+                        <div class="shopping-cart">
+                            <button><img src="album/shopping-cart-black.png" alt="購物車"></button>
                         </div>
                     </div>
-                </li>
-                <li class="product">
-                    <div class="model">
-                        <a href="product-description.html">
-                            <div class="pic">
-                              <img src="album/flower-lang-2.png" alt="花語">
-                            </div>
-                            <div class=pop-up>花語</div>
-                        </a>
-                    </div>
-                    <div class="product-txt">
-                        <div class="price nosale">
+                </div>
+            </li>
+            <li class="product">
+                <div class="model">
+                    <a href="product-description.html">
+                        <div class="pic">
+                            <img src="album/flower-lang-2.png" alt="花語">
+                        </div>
+                        <div class=pop-up>花語</div>
+                    </a>
+                </div>
+                <div class="product-txt">
+                    <div class="price nosale">
                             水水價:NT$5,000
+                    </div>
+                    <div class="action">
+                        <div class="like">
+                            <button><img class="favorite"src="album/like.png" alt="收藏" title="加入最愛"></button>
                         </div>
-                        <div class="action">
-                            <div class="like">
-                                <button><img src="album/like.png" alt="收藏"></button>
-                            </div>
-                            <div class="shopping-cart">
-                                <button><img src="album/shopping-cart-black.png" alt="購物車"></button>
-                            </div>
+                        <div class="shopping-cart">
+                            <button><img src="album/shopping-cart-black.png" alt="購物車"></button>
                         </div>
                     </div>
-                </li>
-                <li class="product">
-                    <div class="model">
-                        <a href="product-description.html">
-                            <div class="pic">
-                              <img src="album/model-2.png" alt="佳人的桂冠">
-                            </div>
-                            <div class=pop-up>佳人的桂冠</div>
-                        </a>
-                    </div>
-                    <div class="product-txt">
-                        <div class="price nosale">
+                </div>
+            </li>
+            <li class="product">
+                <div class="model">
+                    <a href="product-description.html">
+                        <div class="pic">
+                            <img src="album/model-2.png" alt="佳人的桂冠">
+                        </div>
+                        <div class=pop-up>佳人的桂冠</div>
+                    </a>
+                </div>
+                <div class="product-txt">
+                    <div class="price nosale">
                             水水價:NT$6,000
+                    </div>
+                    <div class="action">
+                        <div class="like">
+                            <button><img class="favorite"src="album/like.png" alt="收藏" title="加入最愛"></button>
                         </div>
-                        <div class="action">
-                            <div class="like">
-                                <button><img src="album/like.png" alt="收藏"></button>
-                            </div>
-                            <div class="shopping-cart">
-                                <button><img src="album/shopping-cart-black.png" alt="購物車"></button>
-                            </div>
+                        <div class="shopping-cart">
+                            <button><img src="album/shopping-cart-black.png" alt="購物車"></button>
                         </div>
                     </div>
-                </li>
-                <li class="product">
-                    <div class="model">
-                        <a href="product-description.html">
-                            <div class="pic">
-                              <img src="album/seduce-2.png" alt="迷惑">
-                            </div>
-                            <div class=pop-up>迷惑</div>
-                        </a>
-                    </div>
-                    <div class="product-txt">
-                        <div class="price nosale">
+                </div>
+            </li>
+            <li class="product">
+                <div class="model">
+                    <a href="product-description.html">
+                        <div class="pic">
+                            <img src="album/seduce-3.png" alt="迷惑">
+                        </div>
+                        <div class=pop-up>迷惑</div>
+                    </a>
+                </div>
+                <div class="product-txt">
+                    <div class="price nosale">
                             水水價:NT$2,500
+                    </div>
+                    <div class="action">
+                        <div class="like">
+                            <button><img class="favorite"src="album/like.png" alt="收藏" title="加入最愛"></button>
                         </div>
-                        <div class="action">
-                            <div class="like">
-                                <button><img src="album/like.png" alt="收藏"></button>
-                            </div>
-                            <div class="shopping-cart">
-                                <button><img src="album/shopping-cart-black.png" alt="購物車"></button>
-                            </div>
+                        <div class="shopping-cart">
+                            <button><img src="album/shopping-cart-black.png" alt="購物車"></button>
                         </div>
                     </div>
-                </li>
-                <li class="product">
-                    <div class="model">
-                        <a href="product-description.html">
-                            <div class="pic">
-                              <img src="album/flower-lang-2.png" alt="花語">
-                            </div>
-                            <div class=pop-up>花語</div>
-                        </a>
-                    </div>
-                    <div class="product-txt">
-                        <div class="price nosale">
+                </div>
+            </li>
+            <li class="product">
+                <div class="model">
+                    <a href="product-description.html">
+                        <div class="pic">
+                            <img src="album/flower-lang-2.png" alt="花語">
+                        </div>
+                        <div class=pop-up>花語</div>
+                    </a>
+                </div>
+                <div class="product-txt">
+                    <div class="price nosale">
                             水水價:NT$3,500
+                    </div>
+                    <div class="action">
+                        <div class="like">
+                            <button><img class="favorite"src="album/like.png" alt="收藏" title="加入最愛"></button>
                         </div>
-                        <div class="action">
-                            <div class="like">
-                                <button><img src="album/like.png" alt="收藏"></button>
-                            </div>
-                            <div class="shopping-cart">
-                                <button><img src="album/shopping-cart-black.png" alt="購物車"></button>
-                            </div>
+                        <div class="shopping-cart">
+                            <button><img src="album/shopping-cart-black.png" alt="購物車"></button>
                         </div>
                     </div>
-                </li>
-                <li class="product">
-                    <div class="model">
-                        <a href="product-description.html">
-                            <div class="pic">
-                              <img src="album/flower-love-2.png" alt="花戀">
-                            </div>
-                            <div class=pop-up>花戀</div>
-                        </a>
-                    </div>
-                    <div class="product-txt">
-                        <div class="price nosale">
+                </div>
+            </li>
+            <li class="product">
+                <div class="model">
+                    <a href="product-description.html">
+                        <div class="pic">
+                            <img src="album/flower-love-2.png" alt="花戀">
+                        </div>
+                        <div class=pop-up>花戀</div>
+                    </a>
+                </div>
+                <div class="product-txt">
+                    <div class="price nosale">
                             水水價:NT$5,500
+                    </div>
+                    <div class="action">
+                        <div class="like">
+                            <button><img class="favorite"src="album/like.png" alt="收藏" title="加入最愛"></button>
                         </div>
-                        <div class="action">
-                            <div class="like">
-                                <button><img src="album/like.png" alt="收藏"></button>
-                            </div>
-                            <div class="shopping-cart">
-                                <button><img src="album/shopping-cart-black.png" alt="購物車"></button>
-                            </div>
+                        <div class="shopping-cart">
+                            <button><img src="album/shopping-cart-black.png" alt="購物車"></button>
                         </div>
                     </div>
-                </li>
-                <li class="product">
-                    <div class="model">
-                        <a href="product-description.html">
-                            <div class="pic">
-                              <img src="album/flower-lang-2.png" alt="花語">
-                            </div>
-                            <div class=pop-up>花語</div>
-                        </a>
-                    </div>
-                    <div class="product-txt">
-                        <div class="price nosale">
+                </div>
+            </li>
+            <li class="product">
+                <div class="model">
+                    <a href="product-description.html">
+                        <div class="pic">
+                            <img src="album/flower-lang-2.png" alt="花語">
+                        </div>
+                        <div class=pop-up>花語</div>
+                    </a>
+                </div>
+                <div class="product-txt">
+                    <div class="price nosale">
                             水水價:NT$6,000
+                    </div>
+                    <div class="action">
+                        <div class="like">
+                            <button><img class="favorite"src="album/like.png" alt="收藏" title="加入最愛"></button>
                         </div>
-                        <div class="action">
-                            <div class="like">
-                                <button><img src="album/like.png" alt="收藏"></button>
-                            </div>
-                            <div class="shopping-cart">
-                                <button><img src="album/shopping-cart-black.png" alt="購物車"></button>
-                            </div>
+                        <div class="shopping-cart">
+                            <button><img src="album/shopping-cart-black.png" alt="購物車"></button>
                         </div>
                     </div>
-                </li>
-                <li class="product">
-                    <div class="model">
-                        <a href="product-description.html">
-                            <div class="pic">
-                              <img src="album/model-2.png" alt="花語">
-                            </div>
-                            <div class=pop-up>佳人的桂冠</div>
-                        </a>
-                    </div>
-                    <div class="product-txt">
-                        <div class="price nosale">
+                </div>
+            </li>
+            <li class="product">
+                <div class="model">
+                    <a href="product-description.html">
+                        <div class="pic">
+                            <img src="album/model-2.png" alt="花語">
+                        </div>
+                        <div class=pop-up>佳人的桂冠</div>
+                    </a>
+                </div>
+                <div class="product-txt">
+                    <div class="price nosale">
                             水水價:NT$6,500
+                    </div>
+                    <div class="action">
+                        <div class="like">
+                            <button><img class="favorite"src="album/like.png" alt="收藏" title="加入最愛"></button>
                         </div>
-                        <div class="action">
-                            <div class="like">
-                                <button><img src="album/like.png" alt="收藏"></button>
-                            </div>
-                            <div class="shopping-cart">
-                                <button><img src="album/shopping-cart-black.png" alt="購物車"></button>
-                            </div>
+                        <div class="shopping-cart">
+                            <button><img src="album/shopping-cart-black.png" alt="購物車"></button>
                         </div>
                     </div>
-                </li>
-                <li class="product">
-                    <div class="model">
-                        <a href="product-description.html">
-                            <div class="pic">
-                              <img src="album/flower-love-2.png" alt="花戀">
-                            </div>
-                            <div class=pop-up>花戀</div>
-                        </a>
-                    </div>
-                    <div class="product-txt">
-                        <div class="price nosale">
+                </div>
+            </li>
+            <li class="product">
+                <div class="model">
+                    <a href="product-description.html">
+                        <div class="pic">
+                            <img src="album/flower-love-2.png" alt="花戀">
+                        </div>
+                        <div class=pop-up>花戀</div>
+                    </a>
+                </div>
+                <div class="product-txt">
+                    <div class="price nosale">
                             水水價:NT$4,500
+                    </div>
+                    <div class="action">
+                        <div class="like">
+                            <button><img class="favorite"src="album/like.png" alt="收藏" title="加入最愛"></button>
                         </div>
-                        <div class="action">
-                            <div class="like">
-                                <button><img src="album/like.png" alt="收藏"></button>
-                            </div>
-                            <div class="shopping-cart">
-                                <button><img src="album/shopping-cart-black.png" alt="購物車"></button>
-                            </div>
+                        <div class="shopping-cart">
+                            <button><img src="album/shopping-cart-black.png" alt="購物車"></button>
                         </div>
                     </div>
-                </li>
-                <li class="product">
-                    <div class="model">
-                        <a href="product-description.html">
-                            <div class="pic">
-                              <img src="album/seduce-2.png" alt="迷惑">
-                            </div>
-                            <div class=pop-up>迷惑</div>
-                        </a>
-                    </div>
-                    <div class="product-txt">
-                        <div class="price nosale">
+                </div>
+            </li>
+            <li class="product">
+                <div class="model">
+                    <a href="product-description.html">
+                        <div class="pic">
+                            <img src="album/seduce-3.png" alt="迷惑">
+                        </div>
+                        <div class=pop-up>迷惑</div>
+                    </a>
+                </div>
+                <div class="product-txt">
+                    <div class="price nosale">
                             水水價:NT$8,000
+                    </div>
+                    <div class="action">
+                        <div class="like">
+                            <button><img class="favorite"src="album/like.png" alt="收藏" title="加入最愛"></button>
                         </div>
-                        <div class="action">
-                            <div class="like">
-                                <button><img src="album/like.png" alt="收藏"></button>
-                            </div>
-                            <div class="shopping-cart">
-                                <button><img src="album/shopping-cart-black.png" alt="購物車"></button>
-                            </div>
+                        <div class="shopping-cart">
+                            <button><img src="album/shopping-cart-black.png" alt="購物車"></button>
                         </div>
                     </div>
-                </li>
-            </ul>
-        </div> 
-        <div class="pages">
-            <div><a href="#">1</a></div>
-            <div><a href="#">2</a></div>
-            <div><a href="#">3</a></div>
-        </div>
-        <div class="rose"></div>     
-    </section>
-    <!-- footer -->
-    <footer>
+                </div>
+            </li>
+        </ul>
+    </div> 
+    <div class="pages">
+        <div><a href="#">1</a></div>
+        <div><a href="#">2</a></div>
+        <div><a href="#">3</a></div>
+    </div>
+    <div class="rose"></div>     
+</section>
+<!-- footer -->
+<footer>
         <nav>
             <ul class="footer-links">
-                <li><a href="catalogue.html">水水的飾品</a></li>
-                <li><a href="cutomize.html">客製化</a></li>
-                <li><a href="appointment.html">預約觀賞</a></li>
-                <li><a href="fountain.html">折扣許願池</a></li>
-                <li><a href="store.html">門市資訊</a></li>
-            </ul>
-        </nav> 
-        <div class="social-media">
-           <a href="#"><img src="album/instagram.png" alt="IG"></a>
-           <a href="#"><img src="album/facebook.png" alt="FB"></a>
-           <a href="#"><img src="album/youtube.png" alt="YT"></a>
-           <a href="#"><img src="album/twitter.png" alt="twitter"></a>
-        </div>
-        <div class="footer-logo">
-            <a href="home.html"><img src="album/logopng.png" alt="Felix Jewelry"></a>
-        </div>
-
-        <div class="copy-right">
-            &copy;Felix Jewelry. 2021. all rights reserved!
-        </div>
-    </footer>
+            <li><a href="catalogue.html">水水的飾品</a></li>
+            <li><a href="cutomize.html">客製化</a></li>
+            <li><a href="appointment.html">預約觀賞</a></li>
+            <li><a href="fountain.html">折扣許願池</a></li>
+            <li><a href="store.html">門市資訊</a></li>
+        </ul>
+    </nav> 
+    <div class="social-media">
+        <a href="#"><img src="album/instagram.png" alt="IG"></a>
+        <a href="#"><img src="album/facebook.png" alt="FB"></a>
+        <a href="#"><img src="album/youtube.png" alt="YT"></a>
+        <a href="#"><img src="album/twitter.png" alt="twitter"></a>
+    </div>
+    <div class="footer-logo">
+        <a href="home.html"><img src="album/logopng.png" alt="Felix Jewelry"></a>
+    </div>
+    <div class="copy-right">
+        &copy;Felix Jewelry. 2021. all rights reserved!
+    </div>
+</footer>
 </body>
 </html>
