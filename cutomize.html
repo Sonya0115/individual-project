@@ -33,7 +33,6 @@
           color: #cc9966;
        }
        .top-step{
-           width: 50%;
            font-size: 50px;
            text-decoration: 3px underline #ccffcc;
            font-family: 'Carattere', cursive;
@@ -71,7 +70,7 @@
            font-size: 50px;
            animation: turnpink 3s infinite ease-in-out;
        }
-
+       
        @keyframes turnpink {
            0%{ color:black}
            100%{color: #ff3399;}
@@ -97,20 +96,25 @@
               width: 100%;
             }
             .step-pic img{
-             width: 100%;
+             width: 90%;
             }
             .top-step{
                 margin-left: 10%;
             }
             .second{
                 display: flex;
-                flex-direction: row-reverse;
             }
+            .top-step{
+             width: 70%;
+            }      
             .step h3{
              text-align: center;
             }
             .flower-door{
                 display: none;
+            }
+            .reminder{
+                line-height:2em;
             }
         }
         @media screen and (min-width:769px) and (max-width:1199px){
@@ -132,6 +136,7 @@
             }
             .top-step{
                 margin-left: 10%;
+                width: 50%;
             }
             .girl{
               text-align: center;
@@ -180,6 +185,9 @@
             }
             .customize-steps{
               width: 1200px;
+            }
+            .top-step{
+             width: 50%;
             }
             .step{
               width:700px;
