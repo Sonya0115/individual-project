@@ -97,7 +97,6 @@
             content: "開始遊戲";
             color:#fff;
             position: absolute;
-            top: 25%;
             bottom: 0;
             left: 0;
             right:0;
@@ -108,7 +107,6 @@
         }
         .introduction h2{
             text-align: center;
-            margin-bottom: 50px;
             font-weight: bold;
         }
         .story{
@@ -164,6 +162,9 @@
                 bottom:0;
                 margin-left: auto;
             }
+            .start::before{
+              top: 22%;
+            }
             .introduction{
               width: 100%;
               background-image: url(album/scroll.jpg);
@@ -176,6 +177,7 @@
             .introduction h2{
              font-size: 25px;
              margin-top: 5%;
+             margin: 5% 0 5% 0;
             } 
             .story{
              width: 300px;
@@ -221,6 +223,9 @@
                 width: 100%;
                 bottom:0;
                 margin-left: auto;
+            }
+            .start::before{
+             top: 25%;
             }
             .introduction{
              width: 100%;
@@ -279,6 +284,9 @@
            right:0;
            margin: auto;
         }
+        .start::before{
+          top: 25%;
+        }
         .introduction{
             width: 1200px;
             background-size: cover;
@@ -287,6 +295,7 @@
         }
         .introduction h2{
             font-size: 40px;
+            margin-bottom: 50px;
         }
         .story{
             width: 700px;
