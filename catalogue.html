@@ -216,7 +216,10 @@
     function init(){
         document.getElementsByClassName("hb")[0].onclick=openClosemenu;
         document.getElementsByClassName("close")[0].onclick=CloseInfo;
-        heart=document.getElementsByClassName("favorite")[0].onclick= switchFavorite;
+        hearts=document.querySelectorAll(".favorite");
+        for(i=0;i<hearts.length;i++){
+            hearts[i].onclick= switchFavorite;
+        }
     }
       window.addEventListener("load",init,false)
   </script>
